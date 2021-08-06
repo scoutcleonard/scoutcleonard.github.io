@@ -1,7 +1,6 @@
 ---
 title: "About this site"
-description: |
-  Some additional details about the website
+description: Description about the website 
 ---
 
 ```{r setup, include=FALSE}
