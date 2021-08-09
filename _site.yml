@@ -5,9 +5,9 @@ description: |
 output_dir: "docs"
 navbar:
   right:
-    - text: "Knit"
+    - text: "Index"
       href: index.html
-    - text: "Purl"
+    - text: "About"
       href: about.html
     - text: "CV"
       href: cv.html
