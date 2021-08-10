@@ -23,7 +23,6 @@ library(palmerpenguins)
 This is my first try at adding a preview to a blog post. The images was the first result for "puppy" from Google images. I am pretty sure it's not kosher to pull images from the internet for my website without citing my source but I am just playing around in R right now. Maybe I'll exchange for one of my own photos later! 
 
 ```{r}
-names(penguins)
 
 ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm)) +
   geom_point(color = "cornflowerblue") +

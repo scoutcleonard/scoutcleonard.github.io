@@ -11,9 +11,9 @@
     ],
     "date": "2021-08-10",
     "categories": [],
-    "contents": "\nThis is my first try at adding a preview to a blog post. The images was the first result for “puppy” from Google images. I am pretty sure it’s not kosher to pull images from the internet for my website without citing my source but I am just playing around in R right now. Maybe I’ll exchange for one of my own photos later!\n\n[1] \"species\"           \"island\"            \"bill_length_mm\"   \n[4] \"bill_depth_mm\"     \"flipper_length_mm\" \"body_mass_g\"      \n[7] \"sex\"               \"year\"             \n\n\nThis is my scatter plot of penguin body mass to flipper length ratios. I used the Palmer’s Penguins Dataset and ggplot function. I’m still playing around with my blog and am just adding this as an example of what I’ve learned to code this week. Enjoy!\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "contents": "\nThis is my first try at adding a preview to a blog post. The images was the first result for “puppy” from Google images. I am pretty sure it’s not kosher to pull images from the internet for my website without citing my source but I am just playing around in R right now. Maybe I’ll exchange for one of my own photos later!\n\n\n\nThis is my scatter plot of penguin body mass to flipper length ratios. I used the Palmer’s Penguins Dataset and ggplot function. I’m still playing around with my blog and am just adding this as an example of what I’ve learned to code this week. Enjoy!\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": "posts/2021-08-10-a-function-i-learned/images/Golde33443.jpg",
-    "last_modified": "2021-08-10T10:57:39-07:00",
+    "last_modified": "2021-08-10T11:01:27-07:00",
     "input_file": {}
   },
   {
