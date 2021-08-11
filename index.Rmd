@@ -1,6 +1,6 @@
 ---
 title: "Scout Leonard"
-image: "scout.PNG"
+image: "headshot.PNG"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/scout-leonard-a72539131/"
