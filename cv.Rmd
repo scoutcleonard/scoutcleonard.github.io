@@ -8,8 +8,16 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-```{r}
-ggplot(data = diamonds, aes(x = carat, y = price)) +
-  geom_point( aes(color = price))
-```
+# Education
+
+## The Bren School of Environmental Science and Management at the University of California Santa Barbara 
+Masters, Environmental Data Science 
+Santa Barbara, California 
+
+## Harvard College
+B.A., Integrative Biology; Secondary, Energy and the Environment 
+Cambridge, Massachusetts 
+May 2018
+
+
 
