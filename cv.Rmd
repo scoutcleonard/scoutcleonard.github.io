@@ -1,5 +1,5 @@
 ---
-title: "About this site"
+title: "Scout's CV"
 description: Description about the website 
 ---
 
@@ -8,13 +8,13 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-# Education
+## Education
 
-## The Bren School of Environmental Science and Management at the University of California Santa Barbara 
+# The Bren School of Environmental Science and Management at the University of California Santa Barbara 
 Masters, Environmental Data Science 
 Santa Barbara, California 
 
-## Harvard College
+# Harvard College
 B.A., Integrative Biology; Secondary, Energy and the Environment 
 Cambridge, Massachusetts 
 May 2018

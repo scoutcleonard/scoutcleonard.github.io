@@ -6,29 +6,29 @@
       "description": "Description about the website",
       "author": [],
       "contents": "\nScout is a graduate student in the Masters of Environmental Data Science Program at the Bren School of Environmental Science and Management at the University of California, Santa Barbara. In 2018, she received her Bachelor’s Degree from Harvard University, where she studied Integrative Biology and Energy & the Environment. At Harvard, Scout conducted plant phylogenetics research. She also led consulting projects for nonprofit groups with the Harvard College Conservation Society. On a summer internship, a unique interdisciplinary conservation project (using beehives to reduce human-elephant conflict and protect agriculture) shifted her interest from ecology to human-environmental systems and conservation conflict resolution.\nScout believes in studying the environment in the complex way that it exists in relationship with human populations. As such, she has spent the last 3 years working on urban food systems in Oakland, California with nonprofit groups No Kid Hungry and FoodCorps. Her work expands access to healthy school meals for Oakland students. Scout believes that every person has the right to nutritious, culturally-appropriate food. She oversaw food system programs by managing procurement, participation, and waste data; Scout hopes her growing skills as a data scientist can help her to transform food systems to be more sustainable and equitable.\n\n\n\n",
-      "last_modified": "2021-08-11T16:38:33-07:00"
+      "last_modified": "2021-08-12T15:13:21-07:00"
     },
     {
       "path": "blog.html",
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-08-11T16:38:33-07:00"
+      "last_modified": "2021-08-12T15:13:21-07:00"
     },
     {
       "path": "cv.html",
-      "title": "About this site",
+      "title": "Scout's CV",
       "description": "Description about the website",
       "author": [],
       "contents": "\nEducation\nThe Bren School of Environmental Science and Management at the University of California Santa Barbara\nMasters, Environmental Data Science Santa Barbara, California\nHarvard College\nB.A., Integrative Biology; Secondary, Energy and the Environment Cambridge, Massachusetts May 2018\n\n\n\n",
-      "last_modified": "2021-08-11T16:38:34-07:00"
+      "last_modified": "2021-08-12T15:13:22-07:00"
     },
     {
       "path": "index.html",
       "title": "Scout Leonard",
       "author": [],
       "contents": "\n\n          \n          \n          My Website\n          \n          \n          Index\n          About\n          CV\n          Blog\n          ☰\n          \n          \n      \n        \n          \n            Scout Leonard\n          \n          \n            \n              I am a Masters student in the Masters of Environmental Data Science program at the Bren School at University of California Santa Barbara.\n            \n            \n              I am a Masters student in the Masters of Environmental Data Science program at the Bren School at University of California Santa Barbara.\n            \n          \n\n          \n            \n              \n                  \n                    \n                      LinkedIn\n                    \n                  \n                \n                                \n                  \n                    \n                      GitHub\n                    \n                  \n                \n                                \n                  \n                    \n                      Email\n                    \n                  \n                \n                                \n                  \n                    \n                      Ravelry\n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    LinkedIn\n                  \n                \n                                \n                  \n                    GitHub\n                  \n                \n                                \n                  \n                    Email\n                  \n                \n                                \n                  \n                    Ravelry\n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2021-08-11T16:38:34-07:00"
+      "last_modified": "2021-08-12T15:13:22-07:00"
     }
   ],
   "collections": ["posts/posts.json"]
