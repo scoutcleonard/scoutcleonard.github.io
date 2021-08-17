@@ -15,4 +15,4 @@ output:
 site: distill::distill_website
 ---
  
-I am a Masters student in the Masters of Environmental Data Science program at the Bren School at University of California Santa Barbara. 
+I am a  graduate student in the Masters of Environmental Data Science program at the Bren School at the University of California Santa Barbara. My previous work includes multidisciplinary roles in nonprofit organizations prioritizing environmental justice! 

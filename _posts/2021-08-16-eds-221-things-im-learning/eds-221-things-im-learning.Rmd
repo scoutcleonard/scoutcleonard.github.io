@@ -9,6 +9,7 @@ date: 08-16-2021
 output:
   distill::distill_article:
     self_contained: false
+preview: images/meds_photo.jpg
 ---
 
 
@@ -44,6 +45,8 @@ A **concept** we've learned in EDS 221 is tidy data. As an organizational fiend,
 1.) Each variable is a column.
 2.) Each observation is a row. 
 3.) Each cell contains **1** value. 
+
+A **~thing~** I have learned about doing data science is that reproducible workflows are essential, and acheived in various ways! Valuing the code over the product (i.e. saving and pushing to repo) is more important that the output (html you knit!). Create a repo and stage, commit, push, pull early and often! Try not to copy and paste code. Be aware of the order in which you put functions. Do not alter your original data set. There are many more, but as you can see, reproducible workflows are **essential.**
 
 
 

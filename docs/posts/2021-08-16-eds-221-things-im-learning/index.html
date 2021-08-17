@@ -112,12 +112,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["EDS 221: Things I'm Learning!"]},{"type":"character","attributes":{},"value":["A reflection on all the things I'm learning in my first weeks of graduate school."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Scout Leonard"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-16-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","preview"]}},"value":[{"type":"character","attributes":{},"value":["EDS 221: Things I'm Learning!"]},{"type":"character","attributes":{},"value":["A reflection on all the things I'm learning in my first weeks of graduate school."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Scout Leonard"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-16-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["images/meds_photo.jpg"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["eds-221-things-im-learning_files/anchor-4.2.2/anchor.min.js","eds-221-things-im-learning_files/bowser-1.9.3/bowser.min.js","eds-221-things-im-learning_files/distill-2.2.21/template.v2.js","eds-221-things-im-learning_files/figure-html5/unnamed-chunk-1-1.png","eds-221-things-im-learning_files/header-attrs-2.9/header-attrs.js","eds-221-things-im-learning_files/jquery-1.11.3/jquery.min.js","eds-221-things-im-learning_files/popper-2.6.0/popper.min.js","eds-221-things-im-learning_files/tippy-6.2.7/tippy-bundle.umd.min.js","eds-221-things-im-learning_files/tippy-6.2.7/tippy-light-border.css","eds-221-things-im-learning_files/tippy-6.2.7/tippy.css","eds-221-things-im-learning_files/tippy-6.2.7/tippy.umd.min.js","eds-221-things-im-learning_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["eds-221-things-im-learning_files/anchor-4.2.2/anchor.min.js","eds-221-things-im-learning_files/bowser-1.9.3/bowser.min.js","eds-221-things-im-learning_files/distill-2.2.21/template.v2.js","eds-221-things-im-learning_files/figure-html5/unnamed-chunk-1-1.png","eds-221-things-im-learning_files/header-attrs-2.9/header-attrs.js","eds-221-things-im-learning_files/jquery-1.11.3/jquery.min.js","eds-221-things-im-learning_files/popper-2.6.0/popper.min.js","eds-221-things-im-learning_files/tippy-6.2.7/tippy-bundle.umd.min.js","eds-221-things-im-learning_files/tippy-6.2.7/tippy-light-border.css","eds-221-things-im-learning_files/tippy-6.2.7/tippy.css","eds-221-things-im-learning_files/tippy-6.2.7/tippy.umd.min.js","eds-221-things-im-learning_files/webcomponents-2.0.0/webcomponents.js","images/meds_photo.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2148,9 +2148,9 @@ html {
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
   /*-- Specify custom fonts ~~~ must be imported above   --*/
   --heading-font:    Crimson Text;
-  --mono-font:       monospace;
+  --mono-font:       Crimson Text;
   --body-font:       Crimson Text;
-  --navbar-font:     sans-serif;  /* websites + blogs only */
+  --navbar-font:     Crimson Text;  /* websites + blogs only */
 }
 
 /*-- ARTICLE METADATA --*/
@@ -2419,6 +2419,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <p>I made this stacked bar graph so you can see that I have a new column that has two classifications for flipper length: <em>medium</em> and <em>small</em>.</p>
 <p>A <strong>concept</strong> we’ve learned in EDS 221 is tidy data. As an organizational fiend, this has been one of my favorite concepts! I have worked on many, many untidy spreadsheets over the years. In tidy data, data is organized in a predictable way! Most importantly, tidy data has:</p>
 <p>1.) Each variable is a column. 2.) Each observation is a row. 3.) Each cell contains <strong>1</strong> value.</p>
+<p>A <strong><sub>thing</sub></strong> I have learned about doing data science is that reproducible workflows are essential, and acheived in various ways! Valuing the code over the product (i.e. saving and pushing to repo) is more important that the output (html you knit!). Create a repo and stage, commit, push, pull early and often! Try not to copy and paste code. Be aware of the order in which you put functions. Do not alter your original data set. There are many more, but as you can see, reproducible workflows are <strong>essential.</strong></p>
 <p>Distill is a publication format for scientific and technical writing, native to the web.</p>
 <p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

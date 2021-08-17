@@ -1,6 +1,6 @@
 ---
 title: "Scout's CV"
-description: Description about the website 
+description: Below is my CV.  
 ---
 
 ```{r setup, include=FALSE}
@@ -10,14 +10,31 @@ library(tidyverse)
 
 ## Education
 
-# The Bren School of Environmental Science and Management at the University of California Santa Barbara 
+**The Bren School of Environmental Science and Management at the University of California Santa Barbara**
 Masters, Environmental Data Science 
-Santa Barbara, California 
+Santa Barbara, California; current
 
-# Harvard College
+**Harvard College**
 B.A., Integrative Biology; Secondary, Energy and the Environment 
-Cambridge, Massachusetts 
+Cambridge, Massachusetts;
 May 2018
+
+## Awards and Honors
+
+- **UC Santa Barbara Merit-Based Academic Scholarship:** 2021
+- **Princeton in Africa Fellowship Finalist:** 2020
+- **Food Corps Alumni Council Member:** 2019
+- **Adams House Peter Cai Award:** 2018
+- **Harvard Center for Public Interest Careers Harvard Clubs Summer Community Service Fellowship Recipient:** 2018
+- **Harvard Graduate School of Education Opportunities in Education Fellowship Recipient:** 2017
+- **Harvard College Weissman International Internship Grant Recipient:** 2017
+
+## Presentations
+- **Leonard S,** Vitorino, J. (2019 March). *Teaching Stone Soup.* Oral Presentation at FoodCorps Mid-Year Gathering for "FoodChats" symposium.
+- **Leonard S.** (2019 April). *Financial Aid Story.* Oral Presentation at the San Francisco Coelebration of Scholars for Harvard Alumni. 
+
+## Work Experience
+
 
 
 
