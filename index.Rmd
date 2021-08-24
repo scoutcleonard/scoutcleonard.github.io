@@ -2,13 +2,13 @@
 title: "Scout Leonard"
 image: "headshot.png"
 links:
-  - label: LinkedIn 🔗
+  - label: LinkedIn
     url: "https://www.linkedin.com/in/scout-leonard-a72539131/"
-  - label: GitHub 👩‍💻
+  - label: GitHub
     url: "https://github.com/scoutcleonard"
-  - label: Email 📫
+  - label: Email
     url: "scout@bren.ucsb.edu"
-  - label: Ravelry 🧶
+  - label: Ravelry
     url: "https://www.ravelry.com/people/scoutcleonard" 
 output:
   postcards::jolla
@@ -17,4 +17,4 @@ site: distill::distill_website
  
 I am a  graduate student in the Masters of Environmental Data Science program at the Bren School at the University of California Santa Barbara. My previous work includes multidisciplinary roles in nonprofit organizations prioritizing environmental justice.
 
-When I'm not knitting markdowns, I knit IRL! You can see my work at the link to my Ravelry page. 
+When I'm not knitting markdowns, I knit IRL; You can see my work at the link to my Ravelry page. :)
