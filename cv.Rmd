@@ -61,9 +61,18 @@ May 2018
   - Maintained safe, secure entry procedures to ensure the safety of the dormitory building and resident community 
   - Provided excellent and efficient service; logged arrived mail and sent email reminders for pick-up, problem-solved with Harvard building maintenance staff around infrastructural and operational events for Adams House students
 
+- **Harvard College Conservation Society |** ___Project Leader___ **|** *Cambridge, Massachusetts.* **|** *2017-2018.*
+- Coordinated with conservation education team at the Kasiisi Project in Uganda to establish curriculum goals 
+- Managed undergraduate team in developing educational tools for the Kasiisi Project’s conservation education program; delegated core responsibilities; supported team members in understanding goals and vision of the project
+- Implemented team-building activities to foster an inclusive, community space where team members could bring their whole selves while working on our project
 
+- **The Kasiisi Project |** ___Beekeeping and Conservation Intern___ **|** *Fort Portal, Uganda.* **|** *Summer 2017.*
+- Built close relationships with local farmers and beekeepers to develop apiary management best practices and systems which improved hive productivity (now harvesting and selling honey)
+- Installed Broodminder hive monitoring devices and trained local beekeepers to do the same and collect data from the devices. Used in global honeybee citizen science and to understand the role of apiaries in conserving elephants 
+- Planned educational materials and activities and taught regional elementary school students about honeybees, their biology, beekeeping, and other environmental topics; collaborated with local educators to teach appropriate content
 
-  
-
-
+- **Harvard University Farrell Lab |** ___Undergraduate Researcher___ **|** *Cambridge, Massachusetts.* **|** *2016-2018.*
+- Learned and independently executed various lab techniques in beetle and plant genomics (DNA amplification, PCR, sequencing), as well as the programs used to understand and analyze genomic data, such as R and Geneius
+- Researched existing, relevant academic work within Aristolochia plant genomics and applied techniques to my own project using Aristolochia samples from Hispaniola
+- Participated in lab discussions and presented in group meetings with graduate student researchers
 
