@@ -2,13 +2,13 @@
 title: "Scout Leonard"
 image: "headshot.png"
 links:
-  - label: LinkedIn 🔗
+  - label: LinkedIn 
     url: "https://www.linkedin.com/in/scout-leonard-a72539131/"
-  - label: GitHub 👩‍💻
+  - label: GitHub 
     url: "https://github.com/scoutcleonard"
-  - label: Email 📫
+  - label: Email 
     url: "scout@bren.ucsb.edu"
-  - label: Ravelry 🧶
+  - label: Ravelry 
     url: "https://www.ravelry.com/people/scoutcleonard" 
 output:
   postcards::jolla
