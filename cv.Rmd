@@ -10,11 +10,11 @@ library(tidyverse)
 
 ## Education
 
-**The Bren School of Environmental Science and Management at the University of California Santa Barbara**
+### The Bren School of Environmental Science and Management at the University of California Santa Barbara
 Masters, Environmental Data Science 
 Santa Barbara, California; current
 
-**Harvard College**
+### Harvard College
 B.A., Integrative Biology; Secondary, Energy and the Environment 
 Cambridge, Massachusetts;
 May 2018
@@ -35,44 +35,60 @@ May 2018
 
 ## Work Experience
 
-- **Share Our Strength: No Kid Hungry Campaign |** ___Oakland Unified School District Breakfast After the Bell Specialist ___ **|** *Oakland, California.* **|** *2019-2020.*
+**Share Our Strength: No Kid Hungry Campaign |** ___Oakland Unified School District Breakfast After the Bell Specialist ___ **|** *Oakland, California.* **|** *2019-2020.*
+
   - Program assessment and implementation across 50 OUSD schools for No Kid Hungry’s Breakfast After the Bell, which strategically ensures more free-and-reduced-lunch-eligible students have access to breakfast 
   - Maintained grant compliance, developed qualitative and quantitative program measures, wrote analytic reports for funders on behalf of 25 schools which received funding for Breakfast After the Bell programming
   - Creative problem solving and support around various programmatic challenges at multiple levels, relying especially on building interpersonal relationships with stakeholders at the school and district level and strong communication skills 
 
 - **The Periodic Table |** ___Bartender___ **|** *Emeryville, California.* **|** *2019-2020.*
+
   - Familiarized myself with history, science, brewing operations, and cultural significance of more than 30 sake varieties, as well as Japanese spirits and California craft beer 
   - Provided friendly, professional, and knowledgeable customer service to bar patrons
   - Managed and served the bar independently; carried out opening and closing procedures, as well as problem-solving technological, culinary, and customer service challenges
 
 - **FoodCorps |** ___AmeriCorps Service Member___ **|** *Oakland, California.* **|** *2018-2019.*
+
   - Completed 1700 hours of service in 2 school communities as the sites’ food and garden educator, serving students, their families, teachers, cafeteria staff, and administrators in fostering a schoolwide culture of health
   - Developed culturally-relevant, hands-on health curriculum to foster healthy habits, reinforce science standards, and increase accessibility to nutritious foods and the outdoors; taught PK-5th grade students 
   - Convened diverse stakeholders to build strategic partnerships in the community to mobilize change in school gardens and cafeterias; generated student choice in cafeteria culture by creating and implementing Socratic seminars
   - Competitively chosen for National Alumni Council to continue supporting FoodCorps alumni in connecting with professions and professionals which support youth hunger-fighting initiatives, school food, policy, and agriculture
   
 - **Atlantic White Shark Conservancy |** ___Summer Fellow___ **|** *Chatham, Massachusetts.* **|** *Summer 2018.*
+
   - Secured grant funding for an added internship position through the Harvard Center for Public Interest Careers
   - Led new partnerships with the Cape Cod Fishermen’s Alliance, Northwest Atlantic Seal Research Consortium, and CARE for the Cape and Islands to communicate holistic messaging about the Cape’s environment and history
   - Communicated ongoing Great White Shark population research and safety information, as well as other science with accessible exhibits designed using Adobe and Microsoft programs, as well as spoken presentations
 
 - **Adams House, Harvard University |** ___Assistant to the Building Manager___ **|** *Cambridge, Massachusetts.* **|** *2015-2018.*
+
   - Greeted dormitory residents and community with warmth and helpfulness as they entered the building and retrieved their mail; completed administrative tasks for dormitory building operations with efficiency and organization
   - Maintained safe, secure entry procedures to ensure the safety of the dormitory building and resident community 
   - Provided excellent and efficient service; logged arrived mail and sent email reminders for pick-up, problem-solved with Harvard building maintenance staff around infrastructural and operational events for Adams House students
 
 - **Harvard College Conservation Society |** ___Project Leader___ **|** *Cambridge, Massachusetts.* **|** *2017-2018.*
-- Coordinated with conservation education team at the Kasiisi Project in Uganda to establish curriculum goals 
-- Managed undergraduate team in developing educational tools for the Kasiisi Project’s conservation education program; delegated core responsibilities; supported team members in understanding goals and vision of the project
-- Implemented team-building activities to foster an inclusive, community space where team members could bring their whole selves while working on our project
+
+  - Coordinated with conservation education team at the Kasiisi Project in Uganda to establish curriculum goals 
+  - Managed undergraduate team in developing educational tools for the Kasiisi Project’s conservation education program; delegated core responsibilities; supported team members in understanding goals and vision of the project
+  - Implemented team-building activities to foster an inclusive, community space where team members could bring their whole selves while working on our project
 
 - **The Kasiisi Project |** ___Beekeeping and Conservation Intern___ **|** *Fort Portal, Uganda.* **|** *Summer 2017.*
-- Built close relationships with local farmers and beekeepers to develop apiary management best practices and systems which improved hive productivity (now harvesting and selling honey)
-- Installed Broodminder hive monitoring devices and trained local beekeepers to do the same and collect data from the devices. Used in global honeybee citizen science and to understand the role of apiaries in conserving elephants 
-- Planned educational materials and activities and taught regional elementary school students about honeybees, their biology, beekeeping, and other environmental topics; collaborated with local educators to teach appropriate content
+
+  - Built close relationships with local farmers and beekeepers to develop apiary management best practices and systems which improved hive productivity (now harvesting and selling honey)
+  - Installed Broodminder hive monitoring devices and trained local beekeepers to do the same and collect data from the devices. Used in global honeybee citizen science and to understand the role of apiaries in conserving elephants 
+  - Planned educational materials and activities and taught regional elementary school students about honeybees, their biology, beekeeping, and other environmental topics; collaborated with local educators to teach appropriate content
 
 - **Harvard University Farrell Lab |** ___Undergraduate Researcher___ **|** *Cambridge, Massachusetts.* **|** *2016-2018.*
-- Learned and independently executed various lab techniques in beetle and plant genomics (DNA amplification, PCR, sequencing), as well as the programs used to understand and analyze genomic data, such as R and Geneius
-- Researched existing, relevant academic work within Aristolochia plant genomics and applied techniques to my own project using Aristolochia samples from Hispaniola
-- Participated in lab discussions and presented in group meetings with graduate student researchers
+  - Learned and independently executed various lab techniques in beetle and plant genomics (DNA amplification, PCR, sequencing), as well as the programs used to understand and analyze genomic data, such as R and Geneius
+  - Researched existing, relevant academic work within Aristolochia plant genomics and applied techniques to my own project using Aristolochia samples from Hispaniola
+  - Participated in lab discussions and presented in group meetings with graduate student researchers
 
+- **Harvard University Museum of Natural History |** ___Undergraduate Research Assistant___ **|** *Cambridge, Massachusetts.* **|** *2015-2016.*
+
+  - Collaborated with museum team to develop vision for “What’s in a Name?” exhibit and online resources
+  - Independently researched biological and scientific information regarding binomial nomenclature and that of specific species; using this research, wrote science communication pieces and compiled relevant images for museum patrons
+
+- **South Shore YMCA Camps Burgess and Hayward |** ___Counselor in Training, Junior Counselor, and Counselor___ **|** *Sandwich, Massachusetts.* **|** *2013-2015.*
+
+  - Cultivated a space of inclusion, joy, and courage for girls ages 8-15 by emphasizing group norms and practices and
+celebrating uniqueness of individual campers, most of whom were away from home for the first time

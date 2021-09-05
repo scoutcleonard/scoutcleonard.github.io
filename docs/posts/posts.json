@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-09-04-eds-214-analytical-workflows-and-scientific-reproducibility/",
+    "title": "EDS 214: Analytical Workflows and Scientific Reproducibility",
+    "description": "A reflection of my graduate school course, EDS 214.",
+    "author": [
+      {
+        "name": "Scout Leonard",
+        "url": {}
+      }
+    ],
+    "date": "2021-09-04",
+    "categories": [],
+    "contents": "\nAnother week done!\nMy brain was worked in totally different ways in Environmental Data Science 214! Unlike in the last 3 weeks of course work, then emphasis was less on technical aspects of using R and more on theoretical concepts of collaborating with your future self and others!\nA concept we learned in EDS 214 is a workflow known as pair programming. Sometimes, when you are working on a project with others, you may code separately on different computers on different parts of the project and different chucks of code. Other times, you may “pair program” by working with one or multiple partners on one computer. In this case, one person is writing code and the rest of the team focuses on the solutions to whatever problem the team wants to solve. The navigator participates by discussing with the driver and other natigators possible solutions, or researching possible solutions. These roles have names: the typing team member is know as the driver and their teammates are known as navigators.\nA ~ thing ~ I have learned about is external servers! Our class has one named Taylor, after the incredible environmental justice scholar from Yale University’s School of the Environment, Doreceta Taylor. When we work with larger datasets in R, our computers will not be able to handle the data as they have so far in our R Projects housed on our machines. Instead, we can access data for projects by storing them on the server. Taylor can only be accessed through UCSB Wifi, or else through the university VPN. I have a personal drive there, as well as access to class drives for coursework which will use storage on the server.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": "posts/2021-09-04-eds-214-analytical-workflows-and-scientific-reproducibility/Unknown.png",
+    "last_modified": "2021-09-04T17:12:21-07:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2021-08-16-eds-221-things-im-learning/",
     "title": "EDS 221: Things I'm Learning!",
     "description": "A reflection on all the things I'm learning in my first weeks of graduate school.",
