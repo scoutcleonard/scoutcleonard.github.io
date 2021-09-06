@@ -1,0 +1,25 @@
+---
+title: "EDS 215: Introduction to Data Storage and Management"
+description: |
+  A reflection of my graduate school course, EDS 215.
+author:
+  - name: Scout Leonard
+    url: {}
+date: 09-05-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+

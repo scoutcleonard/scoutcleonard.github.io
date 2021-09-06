@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Another week done! 
 
-My brain was worked in totally different ways in Environmental Data Science 214! Unlike in the last 3 weeks of course work, then emphasis was less on technical aspects of using R and more on theoretical concepts of collaborating with your future self and others! 
+My brain was worked in totally different ways in Environmental Data Science 214! Unlike in the last 3 weeks of course work, the emphasis was less on technical aspects of using R and more on theoretical concepts of collaborating with your future self and others! 
 
 A **concept** we learned in EDS 214 is a workflow known as *pair programming*. Sometimes, when you are working on a project with others, you may code separately on different computers on different parts of the project and different chucks of code. Other times, you may "pair program" by working with one or multiple partners on one computer. In this case, one person is writing code and the rest of the team focuses on the solutions to whatever problem the team wants to solve. The navigator participates by discussing with the driver and other natigators possible solutions, or researching possible solutions. These roles have names: the typing team member is know as the **driver** and their teammates are known as **navigators**. 
 
