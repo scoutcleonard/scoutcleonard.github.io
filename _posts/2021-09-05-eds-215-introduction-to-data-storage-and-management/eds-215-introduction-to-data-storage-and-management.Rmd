@@ -9,6 +9,7 @@ date: 09-05-2021
 output:
   distill::distill_article:
     self_contained: false
+preview: images/image.png
 ---
 
 
@@ -16,6 +17,15 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+### This week's class was EDS 215: Introduction to Data Storage and Management with James Frew.
+
+Most of our work this week was conducted in the command line of my computer's terminal. This was a little more scary than the last three weeks of R, because running commands in the terminal does not always return visual results when "something has happened," good or bad! The terminal is an efficient way to scale processes that might take more time manually in the **graphic user interface (GUI)** of your computer. For example, if you want to rename 30 files in your computer, you can use commands typed into your terminal (this is relevant for Mac users, like me), which uses the **Shell** to process those commands. This process can rename the files by some convention using only a bit of code! So powerful, but with great power....
+
+A **concept** that Frew emphasized is the use of **scripts** in bash. Writing command line commands and codes into a script like Text Edit helps use to write reproducible code, because we cannot save codes run in the Terminal like in R. We can also run the code saved in a script straight from the script in the terminal. 
+
+A **~ thing ~** I learned this week is that you can erase all the data on your computer in the terminal, which makes me feel like never touching it. So. Much. Power. 
+
+Overall, this class was the most tough for me so far! It was a lot like learning a new language, and I plan to review the relevant [Software Carpentry](https://swcarpentry.github.io/shell-novice/01-intro/) texts to make sure I've really grasped these concepts. 
 
 
 Distill is a publication format for scientific and technical writing, native to the web.
