@@ -6,7 +6,7 @@ description: |
   A reflection of my graduate school course, EDS 214. 
 author:
   - name: Scout Leonard
-    url: {}
+    url: {https://scoutcleonard.github.io}
 date: 09-04-2021
 output:
   distill::distill_article:
