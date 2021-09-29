@@ -1,5 +1,7 @@
 ---
 title: "EDS 215: Introduction to Data Storage and Management"
+categories:
+  - course reflections
 description: |
   A reflection of my graduate school course, EDS 215.
 author:

@@ -10,10 +10,12 @@
       }
     ],
     "date": "2021-09-05",
-    "categories": [],
+    "categories": [
+      "course reflections"
+    ],
     "contents": "\nThis week’s class was EDS 215: Introduction to Data Storage and Management with James Frew.\nMost of our work this week was conducted in the command line of my computer’s terminal. This was a little more scary than the last three weeks of R, because running commands in the terminal does not always return visual results when “something has happened,” good or bad! The terminal is an efficient way to scale processes that might take more time manually in the graphic user interface (GUI) of your computer. For example, if you want to rename 30 files in your computer, you can use commands typed into your terminal (this is relevant for Mac users, like me), which uses the Shell to process those commands. This process can rename the files by some convention using only a bit of code! So powerful, but with great power….\nA concept that Frew emphasized is the use of scripts in bash. Writing command line commands and codes into a script like Text Edit helps use to write reproducible code, because we cannot save codes run in the Terminal like in R. We can also run the code saved in a script straight from the script in the terminal.\nA ~ thing ~ I learned this week is that you can erase all the data on your computer in the terminal, which makes me feel like never touching it. So. Much. Power.\nOverall, this class was the most tough for me so far! It was a lot like learning a new language, and I plan to review the relevant Software Carpentry texts to make sure I’ve really grasped these concepts.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": "posts/2021-09-05-eds-215-introduction-to-data-storage-and-management/images/image.png",
-    "last_modified": "2021-09-10T19:56:56-07:00",
+    "last_modified": "2021-09-29T13:41:32-07:00",
     "input_file": {}
   },
   {
@@ -27,10 +29,12 @@
       }
     ],
     "date": "2021-09-04",
-    "categories": [],
+    "categories": [
+      "course reflections"
+    ],
     "contents": "\nAnother week done!\nMy brain was worked in totally different ways in Environmental Data Science 214! Unlike in the last 3 weeks of course work, the emphasis was less on technical aspects of using R and more on theoretical concepts of collaborating with your future self and others!\nA concept we learned in EDS 214 is a workflow known as pair programming. Sometimes, when you are working on a project with others, you may code separately on different computers on different parts of the project and different chucks of code. Other times, you may “pair program” by working with one or multiple partners on one computer. In this case, one person is writing code and the rest of the team focuses on the solutions to whatever problem the team wants to solve. The navigator participates by discussing with the driver and other natigators possible solutions, or researching possible solutions. These roles have names: the typing team member is know as the driver and their teammates are known as navigators.\nA ~ thing ~ I have learned about is external servers! Our class has one named Taylor, after the incredible environmental justice scholar from Yale University’s School of the Environment, Doreceta Taylor. When we work with larger datasets in R, our computers will not be able to handle the data as they have so far in our R Projects housed on our machines. Instead, we can access data for projects by storing them on the server. Taylor can only be accessed through UCSB Wifi, or else through the university VPN. I have a personal drive there, as well as access to class drives for coursework which will use storage on the server.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": "posts/2021-09-04-eds-214-analytical-workflows-and-scientific-reproducibility/Unknown.png",
-    "last_modified": "2021-09-05T17:57:40-07:00",
+    "last_modified": "2021-09-29T13:41:01-07:00",
     "input_file": {}
   },
   {
@@ -44,10 +48,12 @@
       }
     ],
     "date": "2021-08-16",
-    "categories": [],
+    "categories": [
+      "course reflections"
+    ],
     "contents": "\nI’m learning lots in Environmental Data Science 221: Scientific Programming Essentials!\nHere are some examples of things I’ve learned so far:\nOne function we’ve learned that I enjoy is the case_when() function. When paired with the mutate() function, we can sort data in a newly created column based on existing data. Below is an example with the Palmer Penguins dataset.\n\n\n\nI made this stacked bar graph so you can see that I have a new column that has two classifications for flipper length: medium and small.\nA concept we’ve learned in EDS 221 is tidy data. As an organizational fiend, this has been one of my favorite concepts! I have worked on many, many untidy spreadsheets over the years. In tidy data, data is organized in a predictable way! Most importantly, tidy data has:\n1.) Each variable is a column. 2.) Each observation is a row. 3.) Each cell contains 1 value.\nA thing I have learned about doing data science is that reproducible workflows are essential, and acheived in various ways! Valuing the code over the product (i.e. saving and pushing to repo) is more important that the output (html you knit!). Create a repo and stage, commit, push, pull early and often! Try not to copy and paste code. Be aware of the order in which you put functions. Do not alter your original data set. There are many more, but as you can see, reproducible workflows are essential.\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": "posts/2021-08-16-eds-221-things-im-learning/images/meds_photo.jpg",
-    "last_modified": "2021-08-16T21:23:19-07:00",
+    "last_modified": "2021-09-29T13:40:10-07:00",
     "input_file": {}
   },
   {

@@ -1,5 +1,7 @@
 ---
 title: "EDS 221: Things I'm Learning!"
+categories:
+  - course reflections
 description: |
   A reflection on all the things I'm learning in my first weeks of graduate school.
 author:
