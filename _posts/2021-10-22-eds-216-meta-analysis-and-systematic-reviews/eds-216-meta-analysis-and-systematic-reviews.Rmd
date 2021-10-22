@@ -23,7 +23,7 @@ Each of my classmates were asked to develop a question with the structure, "What
 
 The question I chose was based on my previous work in school food program management and urban food systems in Oakland Unified School District's Nutrition Services Program. I asked, "What are the effects of Farm to School programs on student well-being. My systematic review protocol is in the PDF below. 
 
-```{r, out.width="100%"}
+```{r, out.width="50%"}
 knitr::include_graphics("files/eds216_SystematicReview_ScoutLeonard.pdf")
 ```
 
