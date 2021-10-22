@@ -7,7 +7,16 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 05 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>EDS 216: Meta-Analysis and Systematic Reviews</title>
+      <dc:creator>Scout Leonard</dc:creator>
+      <link>https://scoutcleonard.github.io/posts/2021-10-22-eds-216-meta-analysis-and-systematic-reviews</link>
+      <description>Data aggregation and reviews and assessments of existing scientific literature!</description>
+      <guid>https://scoutcleonard.github.io/posts/2021-10-22-eds-216-meta-analysis-and-systematic-reviews</guid>
+      <pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://scoutcleonard.github.io/posts/2021-10-22-eds-216-meta-analysis-and-systematic-reviews/files/systematic_review.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>EDS 215: Introduction to Data Storage and Management</title>
       <dc:creator>Scout Leonard</dc:creator>

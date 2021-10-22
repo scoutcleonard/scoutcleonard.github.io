@@ -1,0 +1,35 @@
+---
+title: "EDS 216: Meta-Analysis and Systematic Reviews"
+description: |
+  Data aggregation and reviews and assessments of existing scientific literature!
+author:
+  - name: Scout Leonard
+    url: {https://scoutcleonard.github.io}
+date: 10-22-2021
+output:
+  distill::distill_article:
+    self_contained: false
+preview: files/systematic_review.jpg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+My final course of the summer quarter was EDS 216: Meta-Analysis and Systematic Review with Professors Scott Jasechko. In the course, we started by learning about and studying existing systematic reviews of environmental data science topics. We presented one minute presentations about systematic reviews we read; a true test of understanding and fast-talking! :)
+
+Each of my classmates were asked to develop a question with the structure, "What is the effect of X on Y?" These investigations were to be used to develop out own systematic review protocols for the duration of the class. 
+
+The question I chose was based on my previous work in school food program management and urban food systems in Oakland Unified School District's Nutrition Services Program. I asked, "What are the effects of Farm to School programs on student well-being. My systematic review protocol is in the PDF below. 
+
+```{r}
+knitr::include_graphics("files/eds216_SystematicReview_ScoutLeonard.pdf")
+```
+
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+
