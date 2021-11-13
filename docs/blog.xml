@@ -7,7 +7,16 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 22 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Taylor Tuesday!</title>
+      <dc:creator>Scout Leonard</dc:creator>
+      <link>https://scoutcleonard.github.io/posts/2021-11-12-taylor-swift</link>
+      <description>This Tidy Tuesday is from 2 months ago, but Taylor is forever.</description>
+      <guid>https://scoutcleonard.github.io/posts/2021-11-12-taylor-swift</guid>
+      <pubDate>Fri, 12 Nov 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://scoutcleonard.github.io/posts/2021-11-12-taylor-swift/swift_gif.gif" medium="image" type="image/gif"/>
+    </item>
     <item>
       <title>EDS 216: Meta-Analysis and Systematic Reviews</title>
       <dc:creator>Scout Leonard</dc:creator>
