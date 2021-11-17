@@ -1,0 +1,43 @@
+---
+title: "EDS-222"
+description: |
+  A short description of the post.
+author:
+  - name: Scout Leonard
+    url:
+      https://scoutcleonard.github.io: {}
+date: 11-16-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r}
+#load libraries
+
+```
+
+
+## Motivate Your Question
+
+## Describe the Data
+
+
+
+## Analysis Plan
+
+## Summarize the results
+
+## Next Steps 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
+
+

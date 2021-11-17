@@ -23,9 +23,13 @@ Each of my classmates were asked to develop a question with the structure, "What
 
 The question I chose was based on my previous work in urban food systems in Oakland Unified School District's Nutrition Services Program. I asked, "What are the effects of Farm to School programs on student well-being. My systematic review protocol is in the PDF below. 
 
-```{r}
+```{r, fig.width = 7, fig.height = 10}
 knitr::include_graphics("files/eds216_SystematicReview_ScoutLeonard.pdf")
 ```
+
+
+![]("files/eds216_SystematicReview_ScoutLeonard.pdf")
+
 
 One of the main skills I learned in this class was a protocol for conducting literature searches by creating search strings from defined PICO terms. PICO terms represent the Population, Intervention, Comparative, and Outcome of your question of interest. Using Boolean operators and wildcards, you can conduct searches for literature that meets the structure of your scientific question. 
 
