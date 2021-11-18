@@ -27,10 +27,6 @@ The question I chose was based on my previous work in urban food systems in Oakl
 knitr::include_graphics("files/eds216_SystematicReview_ScoutLeonard.pdf")
 ```
 
-
-![]("files/eds216_SystematicReview_ScoutLeonard.pdf")
-
-
 One of the main skills I learned in this class was a protocol for conducting literature searches by creating search strings from defined PICO terms. PICO terms represent the Population, Intervention, Comparative, and Outcome of your question of interest. Using Boolean operators and wildcards, you can conduct searches for literature that meets the structure of your scientific question. 
 
 Systematic reviews are vitally important. Science is expensive, and knowing if and how your question has been answered can prevent duplicate research or inform better, further exploration. Also, scientific literature is massively complex; systematic reviews can be helpful briefs for policy-makers to understand a body of literature without having to read it all themselves!
