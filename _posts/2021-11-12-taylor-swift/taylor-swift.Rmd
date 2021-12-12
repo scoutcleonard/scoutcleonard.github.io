@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 These Tidy Tuesday analyses and visualizations come from the [Tidy Tuesday Github repository for September 14, 2021](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-09-14). The data in the repository comes from [Data.World](Data.World) through Sean Miller, [Billboard.com](Billboard.com) and Spotify. 
 
-I turned 13 years old in the year 2008. This is the same year Taylor Swift's second album, [**Fearless**](https://open.spotify.com/album/4hDok0OAJd57SGIT8xuWJH?si=HXyS53lIT1OuU_RYw3f1_w) was released to the world. Taylor wrote and recorded the lyrics, bursting with fairytale imagery and the highs and lows of life as a teenage girl. I was _smitten._ As a teenager, I came to know every lyric of every song and plastered my room in imgages of Swift pulled from magazines. 
+I turned 13 years old in the year 2008. This is the same year Taylor Swift's second album, [**Fearless**](https://open.spotify.com/album/4hDok0OAJd57SGIT8xuWJH?si=HXyS53lIT1OuU_RYw3f1_w) was released to the world. Taylor wrote and recorded the lyrics, bursting with fairytale imagery and the highs and lows of life as a teenage girl. I was _smitten._ As a teenager, I came to know every lyric of every song and plastered my room in images of Swift pulled from magazines. 
 
 I'm not at the same level of fandom as I was in 9th grade: 
 

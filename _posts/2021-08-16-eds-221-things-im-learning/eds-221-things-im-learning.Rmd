@@ -28,7 +28,7 @@ Here are some examples of things I've learned so far:
 
 One **function** we've learned that I enjoy is the `case_when()` function. When paired with the `mutate()` function, we can sort data in a newly created column based on existing data. Below is an example with the Palmer Penguins dataset. 
 
-```{r}
+```{r fig.alt="Bar graph comparing the flipper length in millimeters of 3 species of penguin: Adelie, Chinstrap, and Gentoo. The flipper sizes are binned to small and large sizes and the proportions of small and large flippers are seen in each bar."}
 case_example <- penguins %>% 
   mutate(binned_flipper_size = case_when(
     flipper_length_mm < 185 ~ "small", 
@@ -38,7 +38,8 @@ case_example <- penguins %>%
 
 ggplot(data = case_example, aes(x = species, y = flipper_length_mm, fill = binned_flipper_size)) +
   geom_col(position = "fill") +
-  labs(title = "Playing with case_when(), a graphic example!")
+  labs(title = "Playing with case_when(), a graphic example!") +
+  theme_minimal()
 ```
 I made this stacked bar graph so you can see that I have a new column that has two classifications for flipper length: *medium* and *small*.
 
