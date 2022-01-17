@@ -1,5 +1,7 @@
 ---
 title: "EDS 216: Meta-Analysis and Systematic Reviews"
+categories:
+  - course reflections
 description: |
   Data aggregation and reviews and assessments of existing scientific literature!
 author:

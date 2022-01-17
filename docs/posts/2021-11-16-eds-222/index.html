@@ -127,7 +127,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Seasonality and Covid-19 impacts on the National School Lunch Program"]},{"type":"character","attributes":{},"value":["For my Statistics for Environmental Data Science class, I chose to explore national monthly participation in the USDA National School Lunch Program using decomposition analysis and hypothesis testing."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Scout Leonard"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://scoutcleonard.github.io"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["12-12-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://scoutcleonard.github.io/posts/2021-11-16-eds-222/"]},{"type":"character","attributes":{},"value":["https://scoutcleonard.github.io/posts/2021-11-16-eds-222/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","categories","description","author","date","output","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Seasonality and Covid-19 impacts on the National School Lunch Program"]},{"type":"character","attributes":{},"value":["class projects"]},{"type":"character","attributes":{},"value":["For my Statistics for Environmental Data Science class, I chose to explore national monthly participation in the USDA National School Lunch Program using decomposition analysis and hypothesis testing."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Scout Leonard"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["https://scoutcleonard.github.io"]}},"value":[{"type":"NULL"}]}]}]},{"type":"character","attributes":{},"value":["12-12-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["https://scoutcleonard.github.io/posts/2021-11-16-eds-222/"]},{"type":"character","attributes":{},"value":["https://scoutcleonard.github.io/posts/2021-11-16-eds-222/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2423,6 +2423,9 @@ d-appendix d-footnote-list a.footnote-backlink {
 <div class="d-title">
 <h1>Seasonality and Covid-19 impacts on the National School Lunch Program</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../blog.html#category:class_projects" class="dt-tag">class projects</a>
+</div>
 <!--/radix_placeholder_categories-->
 <p><p>For my Statistics for Environmental Data Science class, I chose to explore national monthly participation in the USDA National School Lunch Program using decomposition analysis and hypothesis testing.</p></p>
 </div>
@@ -2434,9 +2437,22 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 
 <div class="d-article">
+<p>This statistical analysis was completed for my Master’s program course, Environmental Data Science 222: Statistics for Environmental Data Science. To access the complete history of the code or submit comments of feedback as Issues, visit <a href="https://github.com/scoutcleonard/eds222_finalproject">my <strong>project repository on Github</strong></a>. The code is not included in the PDF documentation of the project write-up, but is visible at <a href="https://scoutcleonard.github.io/eds222_finalproject/blog_draft">this link to the live project web page</a>.</p>
+<h1 id="my-question">My Question:</h1>
+<p>My analysis seeks to explore the questions: <em>Are there seasonal differences in how U.S. school food programs feed students? What about long-term trends, and how did any trends change in 2020 during school closures from the Covid-19 pandemic?</em></p>
+<p>I have previous experience working in school food systems to expand access to this resource for school communities, but you need no time in cafeterias to guess that there would be seasonality in feeding kids. Students off for summer means fewer students participating in school lunch in July and August. I was more interested in understanding seasonal differences within the school year: for example, <em>does the US feed more students in fall compared to winter?</em></p>
+<p>I am also interested in the impact of Covid-19 on school lunch participation. Across the U.S., many school nutrition programs adjusted to serving grab-and-go meals for students who rely on school for part of their daily nutrition during school closures. Understanding service gaps during this time will help our understanding of how effective or ineffective efforts to continue service were in feeding kids. Such knowledge can inform data-driven interventions for a future emergency school closure.</p>
+<h2 id="background">Background</h2>
+<p>The National School Lunch Program (NSLP) is an enormous food system with major implications for equity in American K-12 education. Every day, NSLP provides ~30 million children school lunch at free or reduced prices (1). It operates in public and nonprofit private schools and residential childcare facilities (2).</p>
+<p>To provide meals at free and reduced cost to students, participating school districts are reimbursed subsidies for every qualifying meal they serve. To qualify for subsidy, meals served by Nutrition Services operators must meet federal meal pattern policies which define meal content.</p>
+<p>In the US, an estimated 11.7 million children are estimated to live in food insecure homes this year (5). Students who experience hunger are reported to experience higher risk of decreased academic performance, more tardy and absent days, and more mental health challenges (4). A robust understanding of school food systems can create data-informed decisions around USDA and state school food policy and on-the-ground management so that students do not have hunger as an additional barrier to their wellbeing and academic achievement.</p>
+<h1 id="data-description">Data Description</h1>
+<p>The Food and Nutrition Services sector of the USDA offers <a href="https://www.fns.usda.gov/data-research">monthly and annual reports</a> of national participation in the NSLP and other school meal programs subsidized by the USDA (breakfast, seamless summer, supper, and snacks).</p>
+<p>To answer my questions, I used the <a href="https://www.fns.usda.gov/pd/child-nutrition-tables">National Level Monthly Data for the National School Lunch Program</a>, which gives national-level monthly participation in USDA school nutrition programs since October 2017 (47 months). This data comes in publicly available .pdf and .xlsx formats. I downloaded the .xlsx format of the monthly data and did some tidying in Excel to make sure the .csv version would be friendly with R. This version of the data can be found in my <a href="https://github.com/scoutcleonard/eds222_finalproject">Github repository’s data folder</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://here.r-lib.org/'>here</a></span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#load libraries</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://here.r-lib.org/'>here</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://lubridate.tidyverse.org'>lubridate</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://zoo.R-Forge.R-project.org/'>zoo</a></span><span class='op'>)</span>
@@ -2451,18 +2467,6 @@ d-appendix d-footnote-list a.footnote-backlink {
 </code></pre>
 </div>
 </div>
-<p>This statistical analysis was completed for my Master’s program course, Environmental Data Science 222: Statistics for Environmental Data Science. To access the complete history of the code or submit comments of feedback as Issues, visit <a href="https://github.com/scoutcleonard/eds222_finalproject">my <strong>project repository on Github</strong></a>. The code is not included in the PDF documentation of the project write-up, but is visible at <a href="https://scoutcleonard.github.io/eds222_finalproject/blog_draft">this link to the live project web page</a>.</p>
-<h1 id="my-question">My Question:</h1>
-<p>My analysis seeks to explore the questions: <em>Are there seasonal differences in how U.S. school food programs feed students? What about long-term trends, and how did any trends change in 2020 during school closures from the Covid-19 pandemic?</em></p>
-<p>I have previous experience working in school food systems to expand access to this resource for school communities, but you need no time in cafeterias to guess that there would be seasonality in feeding kids. Students off for summer means fewer students participating in school lunch in July and August. I was more interested in understanding seasonal differences within the school year: for example, <em>does the US feed more students in fall compared to winter?</em></p>
-<p>I am also interested in the impact of Covid-19 on school lunch participation. Across the U.S., many school nutrition programs adjusted to serving grab-and-go meals for students who rely on school for part of their daily nutrition during school closures. Understanding service gaps during this time will help our understanding of how effective or ineffective efforts to continue service were in feeding kids. Such knowledge can inform data-driven interventions for a future emergency school closure.</p>
-<h2 id="background">Background</h2>
-<p>The National School Lunch Program (NSLP) is an enormous food system with major implications for equity in American K-12 education. Every day, NSLP provides ~30 million children school lunch at free or reduced prices (1). It operates in public and nonprofit private schools and residential childcare facilities (2).</p>
-<p>To provide meals at free and reduced cost to students, participating school districts are reimbursed subsidies for every qualifying meal they serve. To qualify for subsidy, meals served by Nutrition Services operators must meet federal meal pattern policies which define meal content.</p>
-<p>In the US, an estimated 11.7 million children are estimated to live in food insecure homes this year (5). Students who experience hunger are reported to experience higher risk of decreased academic performance, more tardy and absent days, and more mental health challenges (4). A robust understanding of school food systems can create data-informed decisions around USDA and state school food policy and on-the-ground management so that students do not have hunger as an additional barrier to their wellbeing and academic achievement.</p>
-<h1 id="data-description">Data Description</h1>
-<p>The Food and Nutrition Services sector of the USDA offers <a href="https://www.fns.usda.gov/data-research">monthly and annual reports</a> of national participation in the NSLP and other school meal programs subsidized by the USDA (breakfast, seamless summer, supper, and snacks).</p>
-<p>To answer my questions, I used the <a href="https://www.fns.usda.gov/pd/child-nutrition-tables">National Level Monthly Data for the National School Lunch Program</a>, which gives national-level monthly participation in USDA school nutrition programs since October 2017 (47 months). This data comes in publicly available .pdf and .xlsx formats. I downloaded the .xlsx format of the monthly data and did some tidying in Excel to make sure the .csv version would be friendly with R. This version of the data can be found in my <a href="https://github.com/scoutcleonard/eds222_finalproject">Github repository’s data folder</a>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#read in the monthly lunch data </span>
@@ -2681,12 +2685,12 @@ d-appendix d-footnote-list a.footnote-backlink {
   <span class='op'>)</span>
 </code></pre>
 </div>
-<div id="wqxohgteuo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="modsyoqomy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#wqxohgteuo .gt_table {
+#modsyoqomy .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2711,7 +2715,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-left-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_heading {
+#modsyoqomy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2723,7 +2727,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-right-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_title {
+#modsyoqomy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2733,7 +2737,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-bottom-width: 0;
 }
 
-#wqxohgteuo .gt_subtitle {
+#modsyoqomy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2743,13 +2747,13 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-top-width: 0;
 }
 
-#wqxohgteuo .gt_bottom_border {
+#modsyoqomy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_col_headings {
+#modsyoqomy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2764,7 +2768,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-right-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_col_heading {
+#modsyoqomy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2784,7 +2788,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   overflow-x: hidden;
 }
 
-#wqxohgteuo .gt_column_spanner_outer {
+#modsyoqomy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2796,15 +2800,15 @@ d-appendix d-footnote-list a.footnote-backlink {
   padding-right: 4px;
 }
 
-#wqxohgteuo .gt_column_spanner_outer:first-child {
+#modsyoqomy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wqxohgteuo .gt_column_spanner_outer:last-child {
+#modsyoqomy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wqxohgteuo .gt_column_spanner {
+#modsyoqomy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2816,7 +2820,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   width: 100%;
 }
 
-#wqxohgteuo .gt_group_heading {
+#modsyoqomy .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2838,7 +2842,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   vertical-align: middle;
 }
 
-#wqxohgteuo .gt_empty_group_heading {
+#modsyoqomy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2853,15 +2857,15 @@ d-appendix d-footnote-list a.footnote-backlink {
   vertical-align: middle;
 }
 
-#wqxohgteuo .gt_from_md > :first-child {
+#modsyoqomy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wqxohgteuo .gt_from_md > :last-child {
+#modsyoqomy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wqxohgteuo .gt_row {
+#modsyoqomy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2880,7 +2884,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   overflow-x: hidden;
 }
 
-#wqxohgteuo .gt_stub {
+#modsyoqomy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2892,7 +2896,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   padding-left: 12px;
 }
 
-#wqxohgteuo .gt_summary_row {
+#modsyoqomy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2902,7 +2906,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   padding-right: 5px;
 }
 
-#wqxohgteuo .gt_first_summary_row {
+#modsyoqomy .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2912,7 +2916,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-top-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_grand_summary_row {
+#modsyoqomy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2922,7 +2926,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   padding-right: 5px;
 }
 
-#wqxohgteuo .gt_first_grand_summary_row {
+#modsyoqomy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2932,11 +2936,11 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-top-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_striped {
+#modsyoqomy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wqxohgteuo .gt_table_body {
+#modsyoqomy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2945,7 +2949,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-bottom-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_footnotes {
+#modsyoqomy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2959,13 +2963,13 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-right-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_footnote {
+#modsyoqomy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#wqxohgteuo .gt_sourcenotes {
+#modsyoqomy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2979,41 +2983,41 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-right-color: #D3D3D3;
 }
 
-#wqxohgteuo .gt_sourcenote {
+#modsyoqomy .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#wqxohgteuo .gt_left {
+#modsyoqomy .gt_left {
   text-align: left;
 }
 
-#wqxohgteuo .gt_center {
+#modsyoqomy .gt_center {
   text-align: center;
 }
 
-#wqxohgteuo .gt_right {
+#modsyoqomy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wqxohgteuo .gt_font_normal {
+#modsyoqomy .gt_font_normal {
   font-weight: normal;
 }
 
-#wqxohgteuo .gt_font_bold {
+#modsyoqomy .gt_font_bold {
   font-weight: bold;
 }
 
-#wqxohgteuo .gt_font_italic {
+#modsyoqomy .gt_font_italic {
   font-style: italic;
 }
 
-#wqxohgteuo .gt_super {
+#modsyoqomy .gt_super {
   font-size: 65%;
 }
 
-#wqxohgteuo .gt_footnote_marks {
+#modsyoqomy .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;

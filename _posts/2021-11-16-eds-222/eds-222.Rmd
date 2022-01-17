@@ -1,5 +1,7 @@
 ---
 title: "Seasonality and Covid-19 impacts on the National School Lunch Program"
+categories:
+  - class projects
 description: |
   For my Statistics for Environmental Data Science class, I chose to explore national monthly participation in the USDA National School Lunch Program using decomposition analysis and hypothesis testing.
 author:
@@ -13,21 +15,6 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-```
-
-```{r}
-library(here)
-library(lubridate)
-library(tidyverse)
-library(zoo)
-library(feasts)
-library(tsibble)
-library(patchwork)
-library(ggplot2)
-library(broom)
-library(gt)
-
-options(scipen = 999)
 ```
 
 This statistical analysis was completed for my Master's program course, Environmental Data Science 222: Statistics for Environmental Data Science. To access the complete history of the code or submit comments of feedback as Issues, visit [my **project repository on Github**](https://github.com/scoutcleonard/eds222_finalproject). The code is not included in the PDF documentation of the project write-up, but is visible at [this link to the live project web page](https://scoutcleonard.github.io/eds222_finalproject/blog_draft). 
@@ -53,6 +40,22 @@ In the US, an estimated 11.7 million children are estimated to live in food inse
 The Food and Nutrition Services sector of the USDA offers [monthly and annual reports](https://www.fns.usda.gov/data-research) of national participation in the NSLP and other school meal programs subsidized by the USDA (breakfast, seamless summer, supper, and snacks). 
 
 To answer my questions, I used the [National Level Monthly Data for the National School Lunch Program](https://www.fns.usda.gov/pd/child-nutrition-tables), which gives national-level monthly participation in USDA school nutrition programs since October 2017 (47 months). This data comes in publicly available .pdf and .xlsx formats. I downloaded the .xlsx format of the monthly data and did some tidying in Excel to make sure the .csv version would be friendly with R. This version of the data can be found in my [Github repository's data folder](https://github.com/scoutcleonard/eds222_finalproject).
+
+```{r}
+#load libraries
+library(here)
+library(lubridate)
+library(tidyverse)
+library(zoo)
+library(feasts)
+library(tsibble)
+library(patchwork)
+library(ggplot2)
+library(broom)
+library(gt)
+
+options(scipen = 999)
+```
 
 ```{r}
 #read in the monthly lunch data 

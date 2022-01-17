@@ -19,9 +19,10 @@ Hi there and welcome!
 
 If you're reading this, it means you've found my blog. I am currently learning to create my own website in R, so thanks for your patience as this masterpiece takes shape. 
 
-I plan to use this blog page as a way to record just a tiny fraction of the amazing amount of things I am learning in my masters program. Mainly, it is a way for me to reflect on the work I've done and to improve and reproduce my code. If you find it interesting or helpful, that is a happy plus :) 
+I plan to use this blog page as a way to record just a tiny fraction of the amazing amount of things I am learning in my [Master's program](https://ucsb-meds.github.io). Mainly, it is a way for me to reflect on the work I've done and to improve and reproduce my code. If you find it interesting or helpful, that is a happy plus :) 
 
 Warm regards and happy coding,
+
 Scout
 
 Distill is a publication format for scientific and technical writing, native to the web.

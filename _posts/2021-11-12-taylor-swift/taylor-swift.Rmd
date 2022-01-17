@@ -1,5 +1,7 @@
 ---
 title: "Taylor Tuesday!"
+categories:
+  - tidy tuesday
 description: |
   This Tidy Tuesday is from 2 months ago, but Taylor is forever.
 author:
@@ -34,7 +36,9 @@ I'm not at the same level of fandom as I was in 9th grade:
 
 when Taylor releases new music! 
 
-When I saw that this Tidy Tuesday dataset was rich with TSwift data, I knew it would be fun for me to practice my data wrangling and visualizations with it. What follows are analyses of Taylor Swift songs by album and by audio features. Hopefully fellow Swifty data scientists will find it as _fearless_, _enchanted_, and _wonderstruck_ as I do! 
+When I saw that this Tidy Tuesday dataset was rich with TSwift data, I knew it would be fun for me to practice my data wrangling and visualizations with it. What follows are analyses of Taylor Swift songs by album and by audio features. **It is by no means a complete blog! I found this soulmate dataset at the beginning of my data science training, and so I plan to continue to apply new concepts and skills to this ongoing blog post.**
+
+Hopefully fellow Swifty data scientists will find it as _fearless_, _enchanted_, and _wonderstruck_ as I do! 
 
 # Load Libraries and Read in Data
 
@@ -197,7 +201,7 @@ speechiness
 
 ### Some More Extensive Exploration!
 
-This is all just me playing with the data. No writing, just Scout, Taylor, and some code chunks. It's fun to practice with this dataset, so I will definitely keep working with it as a break from homework. I plan to run some linear regressions, which I've already started, and add interpretation. I also want to do some hypothesis testing with this data. I can tell the source for the data changed over time, so it might be interesting to see if the loudness, for example, in the most recent albums, has a significantly significant difference from previous albums. 
+This is all just me playing with the data. No writing, just Scout, Taylor, and some code chunks. It's fun to practice with this dataset, so I will definitely keep working with it as a break from homework. I plan to run some linear regressions, which I've already started, and add interpretation. I also want to do some hypothesis testing with this data. I can tell the source for the data changed over time, so it might be interesting to see if the loudness, for example, in the most recent albums, has a statistically significant difference from previous albums. 
 
 ```{r}
 danceability <- ggplot(data = data_by_album, aes(x = spotify_track_album, y = mean_danceability)) +
