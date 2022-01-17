@@ -10,7 +10,8 @@ Scout Leonard graduated from Harvard College in 2018 with her BA in Integrative 
 
 <center>
 
-![The Adams House-hosted graduation for Harvard College graduates from Adams House in 2018. Pictured are Adams House Faculty Deans Drs. Sean (left) and Judy (right) Palfrey. Scout is pictured in center.](images/about/graduation.jpg)
+<img src="images/about/graduation.jpg" alt="Scout at the Adams House-hosted graduation for Harvard College 2018 rgaduates of Adams House. Scout is pictured in center with the Adams House Faculty Deans, Drs. Sean (left) and Judy (right) Palfrey." style="width:600px;"/>
+
 </center>
 
 Supported by the Weissman Fellowship, Scout created apiary management systems for forest-edge hives in Kibale National Forest, Uganda, with the [Kasiisi Project](https://www.kasiisiproject.org). These “beehive-fences” have conservation, economic, and social benefits, even to this day; they reduce human-elephant conflict and provide income to farmers. This project inspired Scout’s interest in multidisciplinary sustainability projects, particularly those that emphasize environmental justice. 
@@ -25,6 +26,6 @@ As such, Scout has spent the last 3 years working on urban food systems in Oakla
 
 <center>
 
-![Prior to managing and implementing district-wide school meal programs in Oakland, I worked closely with students in school gardens and cafeterias!](images/about/ousd.jpeg)
+![Prior to managing and implementing district-wide school meal programs in Oakland, Scout worked closely with students in school gardens and cafeterias!](images/about/ousd.jpeg)
 
 </center>
