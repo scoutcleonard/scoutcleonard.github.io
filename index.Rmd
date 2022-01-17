@@ -15,8 +15,8 @@ output:
 site: distill::distill_website
 ---
 
-### Welcome to my personal website! 
+### Hi and welcome! 
  
-I am a  graduate student in the [<span style="color: #436857;">Masters of Environmental Data Science</span>](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) program at the Bren School at the University of California Santa Barbara. My previous work includes multidisciplinary roles in nonprofit organizations prioritizing environmental justice.
+I am a graduate student in the [<span style="color: #436857;">Masters of Environmental Data Science</span>](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) program at the Bren School at the University of California Santa Barbara. My previous work includes multidisciplinary roles in nonprofit organizations prioritizing environmental justice, especially food justice.
 
-When I'm not knitting markdowns, I knit IRL; you can see my work at the link to my Ravelry page.
+When I'm not knitting markdowns, I knit IRL; fellow Ravelers, you can see my work at the link to my Ravelry page.
