@@ -9,8 +9,8 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-    - text: "CV"
-      href: cv.html
+    - text: "Resume"
+      href: resume/website_resume.pdf
     - text: "Blog"
       href: blog.html
   source_url: https://github.com/scoutcleonard/scoutcleonard.github.io
