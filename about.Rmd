@@ -10,7 +10,7 @@ Scout Leonard graduated from Harvard College in 2018 with her BA in Integrative 
 
 <center>
 
-<img src="images/about/graduation.jpg" alt="Scout at the Adams House-hosted graduation for Harvard College 2018 rgaduates of Adams House. Scout is pictured in center with the Adams House Faculty Deans, Drs. Sean (left) and Judy (right) Palfrey." style="width:600px;"/>
+<img src="images/about/graduation.jpg" alt="Scout at the Adams House-hosted graduation for Harvard College 2018 rgaduates of Adams House. Scout is pictured in center with the Adams House Faculty Deans, Drs. Sean (left) and Judy (right) Palfrey." style="width:400px;"/>
 
 </center>
 
@@ -18,7 +18,7 @@ Supported by the Weissman Fellowship, Scout created apiary management systems fo
 
 <center>
 
-![Pictured is Scout weilding a "Broodminder" device, which she helped beekeepers to install to enhance apiary management during her internship with the Kasiisi Project. These devices automatically collect temperature and humidity data from beehives at regular time intervals, and this data can be retrieved simply via Bluetooth-enabled cellular decives.](images/about/broodminder.jpg)
+<img src="images/about/broodminder.jpg" alt="Pictured is Scout weilding a 'Broodminder' device, which she helped beekeepers to install to enhance apiary management during her internship with the Kasiisi Project. These devices automatically collect temperature and humidity data from beehives at regular time intervals, and this data can be retrieved simply via Bluetooth-enabled cellular decives" style="width:400px;"/>
 
 </center>
 
@@ -26,6 +26,7 @@ As such, Scout has spent the last 3 years working on urban food systems in Oakla
 
 <center>
 
-![Prior to managing and implementing district-wide school meal programs in Oakland, Scout worked closely with students in school gardens and cafeterias!](images/about/ousd.jpeg)
+<img src="images/about/ousd.jpeg" alt="Prior to managing and implementing district-wide school meal programs in Oakland, Scout worked closely with students in school gardens and cafeterias! In this photo she stands in front of a class of 5-6 year-olds who are in a school garden of an Oakland neighborhood." style="width:400px;"/>
+
 
 </center>
