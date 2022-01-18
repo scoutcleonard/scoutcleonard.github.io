@@ -16,7 +16,7 @@ output:
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 I do a bit of knitting, which feels comfortably creative because I can follow patterns and not make a single creative decision if I do not feel comfortable. It's been an artistic outlet that has allowed me to lean into my creativity with some structure, which I like and need. This small project felt similar. 
@@ -117,12 +117,14 @@ iroh_tt <- ggplot(data = tea_data) +
                             color = "cornsilk"),
         plot.title = element_text(size = 16, face = 'bold', hjust = 0.5),
         plot.subtitle = element_text(size = 10, hjust = 0.5))
+
+#save png for website
+ggsave("iroh_tt.png",
+       path = here("_posts", "2022-01-17-avatar-the-last-airbender-who-drinks-the-most-tea", "images"))
 ```
 
 
-```{r}
-iroh_tt
-```
+![](images/iroh_tt.png)
 
 Distill is a publication format for scientific and technical writing, native to the web.
 

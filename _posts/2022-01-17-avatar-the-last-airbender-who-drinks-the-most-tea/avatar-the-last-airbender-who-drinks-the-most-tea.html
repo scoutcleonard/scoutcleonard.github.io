@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["avatar-the-last-airbender-who-drinks-the-most-tea_files/figure-html5/unnamed-chunk-5-1.png","images/iroh_2.png"]}
+  {"type":"character","attributes":{},"value":["avatar-the-last-airbender-who-drinks-the-most-tea_files/anchor-4.2.2/anchor.min.js","avatar-the-last-airbender-who-drinks-the-most-tea_files/bowser-1.9.3/bowser.min.js","avatar-the-last-airbender-who-drinks-the-most-tea_files/distill-2.2.21/template.v2.js","avatar-the-last-airbender-who-drinks-the-most-tea_files/figure-html5/unnamed-chunk-5-1.png","avatar-the-last-airbender-who-drinks-the-most-tea_files/header-attrs-2.10/header-attrs.js","avatar-the-last-airbender-who-drinks-the-most-tea_files/jquery-1.11.3/jquery.min.js","avatar-the-last-airbender-who-drinks-the-most-tea_files/popper-2.6.0/popper.min.js","avatar-the-last-airbender-who-drinks-the-most-tea_files/tippy-6.2.7/tippy-bundle.umd.min.js","avatar-the-last-airbender-who-drinks-the-most-tea_files/tippy-6.2.7/tippy-light-border.css","avatar-the-last-airbender-who-drinks-the-most-tea_files/tippy-6.2.7/tippy.css","avatar-the-last-airbender-who-drinks-the-most-tea_files/tippy-6.2.7/tippy.umd.min.js","avatar-the-last-airbender-who-drinks-the-most-tea_files/webcomponents-2.0.0/webcomponents.js","images/iroh_2.png","images/iroh_tt.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1486,25 +1486,111 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Like Ijeamaka, I applied the techniques of radial visualizations to <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-08-11">a Tidy Tuesday dataset from 2020 which contains the entire script for the Nickelodeon cartoon series, <em>Avatar: the Last Airbender.</em></a> I search for places where characters talk about tea, group by character to figure out who is doing th most talking about tea, and visualize <em>“Who drinks the most tea?”</em> I tweeted my results and received kind praise from <a href="https://twitter.com/ijeamaka_a">Ijeamaka via her Twitter</a>, which made me feel so COOL! I’m thankful for her generous instruction and aRtistry inspiration! She’s made me think harder about communicating data creatively, beautifully, and in unexpected ways!</p>
 <h1 id="load-libraries">Load Libraries</h1>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://stringr.tidyverse.org'>stringr</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/GuangchuangYu/ggimage'>ggimage</a></span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://here.r-lib.org/'>here</a></span><span class='op'>)</span>
 
+<span class='va'>iroh</span> <span class='op'>=</span> <span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"_posts"</span>, <span class='st'>"2022-01-17-avatar-the-last-airbender-who-drinks-the-most-tea"</span>, <span class='st'>"images"</span>, <span class='st'>"iroh_2.png"</span><span class='op'>)</span>
+</code></pre>
+</div>
 </div>
 <h1 id="load-data-from-tidy-tuesday-github-respository.">Load Data from <a href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-08-11">Tidy Tuesday Github Respository</a>.</h1>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>tuesdata</span> <span class='op'>&lt;-</span> <span class='fu'>tidytuesdayR</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/tidytuesdayR/man/tt_load.html'>tt_load</a></span><span class='op'>(</span><span class='st'>'2020-08-11'</span><span class='op'>)</span>
+</code></pre>
+</div>
 <pre><code>
     Downloading file 1 of 2: `avatar.csv`
     Downloading file 2 of 2: `scene_description.csv`</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>avatar</span> <span class='op'>&lt;-</span> <span class='va'>tuesdata</span><span class='op'>$</span><span class='va'>avatar</span>
+</code></pre>
+</div>
 </div>
 <h1 id="wrangle-data-for-tea-string-search">Wrangle Data for Tea String Search</h1>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#search the scripts for places where characters say the word "tea" and keep all those observations</span>
+<span class='va'>tea_data</span> <span class='op'>&lt;-</span> <span class='va'>avatar</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>mutate</span><span class='op'>(</span>tea_mentions <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_count.html'>str_count</a></span><span class='op'>(</span><span class='va'>full_text</span>,
+                                 <span class='st'>" tea "</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>character</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'>summarise</span><span class='op'>(</span>tea_mentions_sum <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>tea_mentions</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>tea_mentions_sum</span> <span class='op'>&gt;</span> <span class='fl'>0</span><span class='op'>)</span> <span class='op'>%&gt;%</span> 
+  <span class='fu'><a href='https://rdrr.io/r/stats/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>character</span> <span class='op'>!=</span> <span class='st'>"Scene Description"</span><span class='op'>)</span>
 
+<span class='va'>team_mentions_max</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>tea_data</span><span class='op'>$</span><span class='va'>tea_mentions_sum</span><span class='op'>)</span>
+</code></pre>
+</div>
 </div>
 <h1 id="create-circular-ggplot-of-tea-mentions">Create Circular ggplot of “Tea Mentions”</h1>
 <div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#create an index for my characters - to be used for x axis of my ggplot</span>
+<span class='va'>tea_data</span><span class='op'>$</span><span class='va'>index</span> <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>tea_data</span><span class='op'>)</span>
 
+<span class='co'>#set angles for characters based on the number of characters in my ggplot (the labels will be placed in a circle, and we want to be able to read them! )</span>
+<span class='va'>number_characters</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>tea_data</span><span class='op'>)</span>
+<span class='va'>id</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='va'>number_characters</span><span class='op'>)</span>
+<span class='va'>angle</span> <span class='op'>=</span> <span class='fl'>90</span> <span class='op'>-</span> <span class='fl'>360</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>id</span><span class='op'>)</span> <span class='op'>/</span> <span class='va'>number_characters</span>
+<span class='va'>tea_data</span><span class='op'>$</span><span class='va'>angle</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>angle</span> <span class='op'>&lt;</span> <span class='op'>-</span><span class='fl'>90</span>, <span class='va'>angle</span> <span class='op'>+</span> <span class='fl'>180</span>, <span class='va'>angle</span><span class='op'>)</span>
+
+<span class='co'>#create a ggplot of </span>
+<span class='va'>iroh_tt</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>tea_data</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_segment.html'>geom_segment</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>index</span>,
+                   xend <span class='op'>=</span> <span class='va'>index</span>,
+                   y <span class='op'>=</span> <span class='fl'>0</span>,
+                   yend <span class='op'>=</span> <span class='va'>tea_mentions_sum</span><span class='op'>)</span>,
+               color <span class='op'>=</span> <span class='st'>"cornsilk"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_segment.html'>geom_segment</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>index</span>,
+                   xend <span class='op'>=</span> <span class='va'>index</span>,
+                   y <span class='op'>=</span> <span class='va'>tea_mentions_sum</span>,
+                   yend <span class='op'>=</span> <span class='va'>team_mentions_max</span><span class='op'>)</span>,
+               linetype <span class='op'>=</span> <span class='st'>'dotted'</span>,
+                 color <span class='op'>=</span> <span class='st'>"cornsilk"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/ggimage/man/geom_image.html'>geom_image</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fl'>8.5</span>,
+                 y <span class='op'>=</span> <span class='op'>-</span><span class='fl'>15</span>,
+                 image <span class='op'>=</span> <span class='va'>iroh</span><span class='op'>)</span>,
+             size <span class='op'>=</span> <span class='fl'>.25</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_segment.html'>geom_segment</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='fl'>0</span>,
+               xend <span class='op'>=</span> <span class='fl'>17</span>,
+               y <span class='op'>=</span> <span class='fl'>0</span>,
+               yend <span class='op'>=</span> <span class='fl'>0</span>,
+               color <span class='op'>=</span> <span class='st'>"cornsilk"</span><span class='op'>)</span> <span class='op'>+</span>
+   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/coord_polar.html'>coord_polar</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/lims.html'>xlim</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>17</span><span class='op'>)</span> <span class='op'>+</span>
+   <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/lims.html'>ylim</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>15</span>, <span class='fl'>35</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_text.html'>geom_text</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>index</span>,
+                y <span class='op'>=</span> <span class='fl'>30</span>,
+                label <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>character</span>, <span class='st'>" : "</span>, <span class='va'>tea_mentions_sum</span><span class='op'>)</span><span class='op'>)</span>,
+            angle <span class='op'>=</span> <span class='va'>angle</span>,
+            family <span class='op'>=</span> <span class='st'>'serif'</span>,
+            color <span class='op'>=</span> <span class='st'>"cornsilk"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Avatar the Last Airbender: \n Who drinks the most tea?"</span>,
+       subtitle <span class='op'>=</span> <span class='st'>"Based on scripts from the TV series, how many times\n does each character say the word 'tea'\n throughout the series?"</span>,
+       caption <span class='op'>=</span> <span class='st'>"Data from the Avatar Wiki and R for Data Science Tidy Tuesday Repository"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span>panel.background <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_rect</a></span><span class='op'>(</span><span class='st'>"#3D2D19"</span><span class='op'>)</span>,
+        plot.background <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_rect</a></span><span class='op'>(</span>fill <span class='op'>=</span> <span class='st'>"#3D2D19"</span><span class='op'>)</span>,
+        panel.grid <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span>,
+        axis.text <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span>,
+        axis.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span>,
+        axis.ticks <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_blank</a></span><span class='op'>(</span><span class='op'>)</span>,
+        text <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>family <span class='op'>=</span> <span class='st'>'serif'</span>,
+                            color <span class='op'>=</span> <span class='st'>"cornsilk"</span><span class='op'>)</span>,
+        plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>16</span>, face <span class='op'>=</span> <span class='st'>'bold'</span>, hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,
+        plot.subtitle <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>10</span>, hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='co'>#save png for website</span>
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggsave.html'>ggsave</a></span><span class='op'>(</span><span class='st'>"iroh_tt.png"</span>,
+       path <span class='op'>=</span> <span class='fu'><a href='https://here.r-lib.org//reference/here.html'>here</a></span><span class='op'>(</span><span class='st'>"_posts"</span>, <span class='st'>"2022-01-17-avatar-the-last-airbender-who-drinks-the-most-tea"</span>, <span class='st'>"images"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
 </div>
-<div class="layout-chunk" data-layout="l-body">
-<p><img src="avatar-the-last-airbender-who-drinks-the-most-tea_files/figure-html5/unnamed-chunk-5-1.png" width="624" /></p>
 </div>
+<p><img src="images/iroh_tt.png" /></p>
 <p>Distill is a publication format for scientific and technical writing, native to the web.</p>
 <p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
