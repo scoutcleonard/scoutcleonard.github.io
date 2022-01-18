@@ -1,5 +1,28 @@
 [
   {
+    "path": "posts/2022-01-17-avatar-the-last-airbender-who-drinks-the-most-tea/",
+    "title": "Avatar the Last Airbender: Who Drinks the Most Tea?",
+    "description": "Radial art in R using ggplot.",
+    "author": [
+      {
+        "name": "Scout Leonard",
+        "url": {
+          "https://scoutcleonard.github.io": {}
+        }
+      }
+    ],
+    "date": "2022-01-17",
+    "categories": [
+      "tidy tuesday"
+    ],
+    "contents": "\nI do a bit of knitting, which feels comfortably creative because I can follow patterns and not make a single creative decision if I do not feel comfortable. It’s been an artistic outlet that has allowed me to lean into my creativity with some structure, which I like and need. This small project felt similar.\nCurious about aRt in R, I decided to watch the R Ladies Sana Barbara talk with Ijeamaka Anyene titled “aRt + ggplot: exploring radial visualizations”. I was pleased to find that the concepts were simple enough to try as I watched Ijeamaka share her gorgeous artwork. To me the simple, beautiful effect of adding + coord_polar to my ggplot bar graphs was amazing, and something I might not have considered on my own, much like new techniques in a knitting pattern :)\nLike Ijeamaka, I applied the techniques of radial visualizations to a Tidy Tuesday dataset from 2020 which contains the entire script for the Nickelodeon cartoon series, Avatar: the Last Airbender. I search for places where characters talk about tea, group by character to figure out who is doing th most talking about tea, and visualize “Who drinks the most tea?” I tweeted my results and received kind praise from Ijeamaka via her Twitter, which made me feel so COOL! I’m thankful for her generous instruction and aRtistry inspiration! She’s made me think harder about communicating data creatively, beautifully, and in unexpected ways!\nLoad Libraries\n\n\n\nLoad Data from Tidy Tuesday Github Respository.\n\n\n    Downloading file 1 of 2: `avatar.csv`\n    Downloading file 2 of 2: `scene_description.csv`\n\nWrangle Data for Tea String Search\n\n\n\nCreate Circular ggplot of “Tea Mentions”\n\n\n\n\n\n\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": "posts/2022-01-17-avatar-the-last-airbender-who-drinks-the-most-tea/avatar-the-last-airbender-who-drinks-the-most-tea_files/figure-html5/unnamed-chunk-5-1.png",
+    "last_modified": "2022-01-17T21:41:49-08:00",
+    "input_file": {},
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2021-11-16-eds-222/",
     "title": "Seasonality and Covid-19 impacts on the National School Lunch Program",
     "description": "For my Statistics for Environmental Data Science class, I chose to explore national monthly participation in the USDA National School Lunch Program using decomposition analysis and hypothesis testing.",
