@@ -7,7 +7,16 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Spatial Analysis: Protecting Whales</title>
+      <dc:creator>Scout Leonard</dc:creator>
+      <link>https://scoutcleonard.github.io/posts/2022-03-22-spatial-analysis-protecting-whales</link>
+      <description>A short description of the post.</description>
+      <guid>https://scoutcleonard.github.io/posts/2022-03-22-spatial-analysis-protecting-whales</guid>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://scoutcleonard.github.io/posts/2022-03-22-spatial-analysis-protecting-whales/spatial-analysis-protecting-whales_files/figure-html5/unnamed-chunk-6-1.png" medium="image" type="image/png" width="576" height="576"/>
+    </item>
     <item>
       <title>Avatar the Last Airbender: Who Drinks the Most Tea?</title>
       <dc:creator>Scout Leonard</dc:creator>

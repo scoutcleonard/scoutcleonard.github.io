@@ -35,11 +35,42 @@ if (!file.exists(reticulate::miniconda_path()))
 
 ```{python}
 #load libraries 
-# import pandas as pd
-# import geopandas as gpd
-# import matplotlib.pyplot as plt
-# import os
-# import numpy as np
-# from shapely.geometry import Polygon
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import os
+import numpy as np
+from shapely.geometry import Polygon
 ```
+
+# Dominica Outline
+
+Import shape file for Dominica. 
+
+```{python}
+input_folder = r"data/dominica"
+dominica_shapefile = "dma_admn_adm0_py_s1_dominode_v2.shp"
+
+dominica_fp = os.path.join(input_folder, dominica_shapefile)
+```
+
+Read file using `file_path()`
+
+```{python}
+dominica_data = gpd.read_file(dominica_fp)
+```
+
+```{python}
+dominica_2002 = dominica_data.to_crs("EPSG:2002")
+```
+
+```{python}
+fig, ax = plt.subplots(figsize=(3, 3), dpi=200)
+ax.grid(True)
+ax.set_facecolor('lightblue')
+
+dominica_2002.plot(ax = ax, color = 'green')
+```
+
+![](figs/fig1.png)
 
