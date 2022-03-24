@@ -3,7 +3,7 @@ title: "Spatial Analysis: Protecting Whales"
 categories:
   - class projects
 description: |
-  A short description of the post.
+  Using Python, I generate a whale-protecting reduced speeding zone and calculate the impact on shipping for the coast of Dominica.
 author:
   - name: Scout Leonard
     url:
@@ -26,8 +26,7 @@ from shapely.geometry import Polygon
 
 ### Dominica Outline
 
-Define file path for Dominica spatial data:
-
+In the code chunk below, I define a file path for Dominica spatial data:
 
 ```python
 input_folder = r"data/dominica"
@@ -36,22 +35,19 @@ dominica_shapefile = "dma_admn_adm0_py_s1_dominode_v2.shp"
 dominica_fp = os.path.join(input_folder, dominica_shapefile)
 ```
 
-Read file using `read_file()`:
-
+Next, I read in the Dominica shapefile using `read_file()`:
 
 ```python
 dominica_data = gpd.read_file(dominica_fp)
 ```
 
-Change the CRS from WGS 84 to Dominica 1945:
-
+Then I change the CRS from WGS 84 to Dominica 1945 for a more accurate geospatial reference system for the region of interest, coastal Domina:
 
 ```python
 dominica_2002 = dominica_data.to_crs("EPSG:2002")
 ```
 
-Plot the outline for exploration:
-
+Next, I plot the outline of Dominica to explore and check that the output is expected:
 
 ```python
 fig, ax = plt.subplots(figsize=(3, 3), dpi=200)
@@ -61,23 +57,9 @@ ax.set_facecolor('lightblue')
 dominica_2002.plot(ax = ax, color = 'green')
 ```
 
-
-
-
-    <AxesSubplot:>
-
-
-
-
-    
-![png](HW3_files/HW3_12_1.png)
-    
-
-
 ### Whale Sighting Data
 
-Define file path for whale sighting spatial data:
-
+Next, I import Define file path for whale sighting spatial data:
 
 ```python
 sightings_input_folder = r"data"

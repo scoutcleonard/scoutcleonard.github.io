@@ -12,7 +12,7 @@
       <title>Spatial Analysis: Protecting Whales</title>
       <dc:creator>Scout Leonard</dc:creator>
       <link>https://scoutcleonard.github.io/posts/2022-03-22-spatial-analysis-protecting-whales</link>
-      <description>A short description of the post.</description>
+      <description>Using Python, I generate a whale-protecting reduced speeding zone and calculate the impact on shipping for the coast of Dominica.</description>
       <category>class projects</category>
       <guid>https://scoutcleonard.github.io/posts/2022-03-22-spatial-analysis-protecting-whales</guid>
       <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
