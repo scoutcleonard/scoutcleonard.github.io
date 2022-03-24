@@ -1,18 +1,9 @@
----
-title: "Spatial Analysis: Protecting Whales"
-categories:
-  - class projects
-description: |
-  A short description of the post.
-author:
-  - name: Scout Leonard
-    url:
-      https://scoutcleonard.github.io: {}
-date: 03-22-2022
-output:
-  distill::distill_article:
-    self_contained: false
----
+# **EDS 223 Assignment 3: Protecting Whales from Ships**
+
+## Meghan Fletcher and Scout Leonard 
+
+### Setup
+
 
 ```python
 #load libraries 
@@ -3422,5 +3413,3 @@ days_lost
 
 
 We can see from our calculations that a 10-knot reduced-speed zone would amount to a total of 27.89 day impact on shipping. While this number is may seem large, it is simply the total amount of time this reduction would cause across all vessels. In order to advocate for this regulation, it might be best to took at the additional time added to each invidudal vessel which we would expect be much lower overall. 
-
-
