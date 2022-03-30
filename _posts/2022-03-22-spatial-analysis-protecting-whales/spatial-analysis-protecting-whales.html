@@ -1481,6 +1481,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
+<h3 id="intro">Intro</h3>
+<p>This blog post is based on an assignment from my Master’s of Environmental Data Science course EDS 223: Spatial Analysis for Environmental Data Science.</p>
+<h3 id="load-libraries">Load Libraries</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load libraries </span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
@@ -1496,7 +1499,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>dominica_fp <span class="op">=</span> os.path.join(input_folder, dominica_shapefile)</span></code></pre></div>
 <p>Next, I read in the Dominica shapefile using <code>read_file()</code>:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dominica_data <span class="op">=</span> gpd.read_file(dominica_fp)</span></code></pre></div>
-<p>Then I change the CRS from WGS 84 to Dominica 1945 for a more accurate geospatial reference system for the region of interest, coastal Domina:</p>
+<p>Then I change the <a href="https://datacarpentry.org/organization-geospatial/03-crs/">CRS</a> from WGS 84 to Dominica 1945 using the function <code>to_crs()</code>. This transforms the CRS to a more accurate geospatial reference system for the region of interest, coastal Dominica:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dominica_2002 <span class="op">=</span> dominica_data.to_crs(<span class="st">&quot;EPSG:2002&quot;</span>)</span></code></pre></div>
 <p>Next, I plot the outline of Dominica to explore and check that the output is expected:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">3</span>, <span class="dv">3</span>), dpi<span class="op">=</span><span class="dv">200</span>)</span>
@@ -1505,7 +1508,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>dominica_2002.plot(ax <span class="op">=</span> ax, color <span class="op">=</span> <span class="st">&#39;green&#39;</span>)</span></code></pre></div>
 <h3 id="whale-sighting-data">Whale Sighting Data</h3>
-<p>Next, I import Define file path for whale sighting spatial data:</p>
+<p>Next, I define the file path for whale sighting spatial data:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sightings_input_folder <span class="op">=</span> <span class="vs">r&quot;data&quot;</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>sightings_csv <span class="op">=</span> <span class="st">&quot;sightings2005_2018.csv&quot;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>

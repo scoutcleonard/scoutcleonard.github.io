@@ -14,6 +14,12 @@ output:
     self_contained: false
 ---
 
+### Intro
+
+This blog post is based on an assignment from my Master's of Environmental Data Science course EDS 223: Spatial Analysis for Environmental Data Science. 
+
+### Load Libraries
+
 ```python
 #load libraries 
 import pandas as pd
@@ -41,7 +47,7 @@ Next, I read in the Dominica shapefile using `read_file()`:
 dominica_data = gpd.read_file(dominica_fp)
 ```
 
-Then I change the CRS from WGS 84 to Dominica 1945 for a more accurate geospatial reference system for the region of interest, coastal Domina:
+Then I change the [CRS](https://datacarpentry.org/organization-geospatial/03-crs/) from WGS 84 to Dominica 1945 using the function `to_crs()`. This transforms the CRS to a more accurate geospatial reference system for the region of interest, coastal Dominica:
 
 ```python
 dominica_2002 = dominica_data.to_crs("EPSG:2002")
@@ -59,7 +65,7 @@ dominica_2002.plot(ax = ax, color = 'green')
 
 ### Whale Sighting Data
 
-Next, I import Define file path for whale sighting spatial data:
+Next, I define the file path for whale sighting spatial data:
 
 ```python
 sightings_input_folder = r"data"
