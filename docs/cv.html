@@ -56,7 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
 code span.cf { color: #007ba5; } /* ControlFlow */
@@ -77,13 +77,14 @@ code span.kw { color: #007ba5; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
 code span.ot { color: #007ba5; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Scout Leonard: Scout's CV</title>
@@ -455,7 +456,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -1862,7 +1863,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          return "<p>" + $('#ref-' + ref).html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -2349,7 +2353,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2406,84 +2410,190 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="education">Education</h2>
-<h3 id="the-bren-school-of-environmental-science-and-management-at-the-university-of-california-santa-barbara">The Bren School of Environmental Science and Management at the University of California Santa Barbara</h3>
-<p>Masters, Environmental Data Science Santa Barbara, California; current</p>
+<h3
+id="the-bren-school-of-environmental-science-and-management-at-the-university-of-california-santa-barbara">The
+Bren School of Environmental Science and Management at the University of
+California Santa Barbara</h3>
+<p>Masters, Environmental Data Science Santa Barbara, California;
+current</p>
 <h3 id="harvard-college">Harvard College</h3>
-<p>B.A., Integrative Biology; Secondary, Energy and the Environment Cambridge, Massachusetts; May 2018</p>
+<p>B.A., Integrative Biology; Secondary, Energy and the Environment
+Cambridge, Massachusetts; May 2018</p>
 <h2 id="awards-and-honors">Awards and Honors</h2>
 <ul>
-<li><strong>UC Santa Barbara Merit-Based Academic Scholarship:</strong> 2021</li>
+<li><strong>UC Santa Barbara Merit-Based Academic Scholarship:</strong>
+2021</li>
 <li><strong>Princeton in Africa Fellowship Finalist:</strong> 2020</li>
 <li><strong>Food Corps Alumni Council Member:</strong> 2019</li>
 <li><strong>Adams House Peter Cai Award:</strong> 2018</li>
-<li><strong>Harvard Center for Public Interest Careers Harvard Clubs Summer Community Service Fellowship Recipient:</strong> 2018</li>
-<li><strong>Harvard Graduate School of Education Opportunities in Education Fellowship Recipient:</strong> 2017</li>
-<li><strong>Harvard College Weissman International Internship Grant Recipient:</strong> 2017</li>
+<li><strong>Harvard Center for Public Interest Careers Harvard Clubs
+Summer Community Service Fellowship Recipient:</strong> 2018</li>
+<li><strong>Harvard Graduate School of Education Opportunities in
+Education Fellowship Recipient:</strong> 2017</li>
+<li><strong>Harvard College Weissman International Internship Grant
+Recipient:</strong> 2017</li>
 </ul>
 <h2 id="presentations">Presentations</h2>
 <ul>
-<li><strong>Leonard S,</strong> Vitorino, J. (2019 March). <em>Teaching Stone Soup.</em> Oral Presentation at FoodCorps Mid-Year Gathering for “FoodChats” symposium.</li>
-<li><strong>Leonard S.</strong> (2019 April). <em>Financial Aid Story.</em> Oral Presentation at the San Francisco Coelebration of Scholars for Harvard Alumni.</li>
+<li><strong>Leonard S,</strong> Vitorino, J. (2019 March). <em>Teaching
+Stone Soup.</em> Oral Presentation at FoodCorps Mid-Year Gathering for
+“FoodChats” symposium.</li>
+<li><strong>Leonard S.</strong> (2019 April). <em>Financial Aid
+Story.</em> Oral Presentation at the San Francisco Coelebration of
+Scholars for Harvard Alumni.</li>
 </ul>
 <h2 id="work-experience">Work Experience</h2>
-<p><strong>Share Our Strength: No Kid Hungry Campaign |</strong> <strong><em>Oakland Unified School District Breakfast After the Bell Specialist </em></strong> <strong>|</strong> <em>Oakland, California.</em> <strong>|</strong> <em>2019-2020.</em></p>
+<p><strong>Share Our Strength: No Kid Hungry Campaign |</strong>
+<strong><em>Oakland Unified School District Breakfast After the Bell
+Specialist </em></strong> <strong>|</strong> <em>Oakland,
+California.</em> <strong>|</strong> <em>2019-2020.</em></p>
 <ul>
-<li><p>Program assessment and implementation across 50 OUSD schools for No Kid Hungry’s Breakfast After the Bell, which strategically ensures more free-and-reduced-lunch-eligible students have access to breakfast</p></li>
-<li><p>Maintained grant compliance, developed qualitative and quantitative program measures, wrote analytic reports for funders on behalf of 25 schools which received funding for Breakfast After the Bell programming</p></li>
-<li><p>Creative problem solving and support around various programmatic challenges at multiple levels, relying especially on building interpersonal relationships with stakeholders at the school and district level and strong communication skills</p></li>
-<li><p><strong>The Periodic Table |</strong> <strong><em>Bartender</em></strong> <strong>|</strong> <em>Emeryville, California.</em> <strong>|</strong> <em>2019-2020.</em></p>
+<li><p>Program assessment and implementation across 50 OUSD schools for
+No Kid Hungry’s Breakfast After the Bell, which strategically ensures
+more free-and-reduced-lunch-eligible students have access to
+breakfast</p></li>
+<li><p>Maintained grant compliance, developed qualitative and
+quantitative program measures, wrote analytic reports for funders on
+behalf of 25 schools which received funding for Breakfast After the Bell
+programming</p></li>
+<li><p>Creative problem solving and support around various programmatic
+challenges at multiple levels, relying especially on building
+interpersonal relationships with stakeholders at the school and district
+level and strong communication skills</p></li>
+<li><p><strong>The Periodic Table |</strong>
+<strong><em>Bartender</em></strong> <strong>|</strong> <em>Emeryville,
+California.</em> <strong>|</strong> <em>2019-2020.</em></p>
 <ul>
-<li>Familiarized myself with history, science, brewing operations, and cultural significance of more than 30 sake varieties, as well as Japanese spirits and California craft beer</li>
-<li>Provided friendly, professional, and knowledgeable customer service to bar patrons</li>
-<li>Managed and served the bar independently; carried out opening and closing procedures, as well as problem-solving technological, culinary, and customer service challenges</li>
+<li>Familiarized myself with history, science, brewing operations, and
+cultural significance of more than 30 sake varieties, as well as
+Japanese spirits and California craft beer</li>
+<li>Provided friendly, professional, and knowledgeable customer service
+to bar patrons</li>
+<li>Managed and served the bar independently; carried out opening and
+closing procedures, as well as problem-solving technological, culinary,
+and customer service challenges</li>
 </ul></li>
-<li><p><strong>FoodCorps |</strong> <strong><em>AmeriCorps Service Member</em></strong> <strong>|</strong> <em>Oakland, California.</em> <strong>|</strong> <em>2018-2019.</em></p>
+<li><p><strong>FoodCorps |</strong> <strong><em>AmeriCorps Service
+Member</em></strong> <strong>|</strong> <em>Oakland, California.</em>
+<strong>|</strong> <em>2018-2019.</em></p>
 <ul>
-<li>Completed 1700 hours of service in 2 school communities as the sites’ food and garden educator, serving students, their families, teachers, cafeteria staff, and administrators in fostering a schoolwide culture of health</li>
-<li>Developed culturally-relevant, hands-on health curriculum to foster healthy habits, reinforce science standards, and increase accessibility to nutritious foods and the outdoors; taught PK-5th grade students</li>
-<li>Convened diverse stakeholders to build strategic partnerships in the community to mobilize change in school gardens and cafeterias; generated student choice in cafeteria culture by creating and implementing Socratic seminars</li>
-<li>Competitively chosen for National Alumni Council to continue supporting FoodCorps alumni in connecting with professions and professionals which support youth hunger-fighting initiatives, school food, policy, and agriculture</li>
+<li>Completed 1700 hours of service in 2 school communities as the
+sites’ food and garden educator, serving students, their families,
+teachers, cafeteria staff, and administrators in fostering a schoolwide
+culture of health</li>
+<li>Developed culturally-relevant, hands-on health curriculum to foster
+healthy habits, reinforce science standards, and increase accessibility
+to nutritious foods and the outdoors; taught PK-5th grade students</li>
+<li>Convened diverse stakeholders to build strategic partnerships in the
+community to mobilize change in school gardens and cafeterias; generated
+student choice in cafeteria culture by creating and implementing
+Socratic seminars</li>
+<li>Competitively chosen for National Alumni Council to continue
+supporting FoodCorps alumni in connecting with professions and
+professionals which support youth hunger-fighting initiatives, school
+food, policy, and agriculture</li>
 </ul></li>
-<li><p><strong>Atlantic White Shark Conservancy |</strong> <strong><em>Summer Fellow</em></strong> <strong>|</strong> <em>Chatham, Massachusetts.</em> <strong>|</strong> <em>Summer 2018.</em></p>
+<li><p><strong>Atlantic White Shark Conservancy |</strong>
+<strong><em>Summer Fellow</em></strong> <strong>|</strong> <em>Chatham,
+Massachusetts.</em> <strong>|</strong> <em>Summer 2018.</em></p>
 <ul>
-<li>Secured grant funding for an added internship position through the Harvard Center for Public Interest Careers</li>
-<li>Led new partnerships with the Cape Cod Fishermen’s Alliance, Northwest Atlantic Seal Research Consortium, and CARE for the Cape and Islands to communicate holistic messaging about the Cape’s environment and history</li>
-<li>Communicated ongoing Great White Shark population research and safety information, as well as other science with accessible exhibits designed using Adobe and Microsoft programs, as well as spoken presentations</li>
+<li>Secured grant funding for an added internship position through the
+Harvard Center for Public Interest Careers</li>
+<li>Led new partnerships with the Cape Cod Fishermen’s Alliance,
+Northwest Atlantic Seal Research Consortium, and CARE for the Cape and
+Islands to communicate holistic messaging about the Cape’s environment
+and history</li>
+<li>Communicated ongoing Great White Shark population research and
+safety information, as well as other science with accessible exhibits
+designed using Adobe and Microsoft programs, as well as spoken
+presentations</li>
 </ul></li>
-<li><p><strong>Adams House, Harvard University |</strong> <strong><em>Assistant to the Building Manager</em></strong> <strong>|</strong> <em>Cambridge, Massachusetts.</em> <strong>|</strong> <em>2015-2018.</em></p>
+<li><p><strong>Adams House, Harvard University |</strong>
+<strong><em>Assistant to the Building Manager</em></strong>
+<strong>|</strong> <em>Cambridge, Massachusetts.</em> <strong>|</strong>
+<em>2015-2018.</em></p>
 <ul>
-<li>Greeted dormitory residents and community with warmth and helpfulness as they entered the building and retrieved their mail; completed administrative tasks for dormitory building operations with efficiency and organization</li>
-<li>Maintained safe, secure entry procedures to ensure the safety of the dormitory building and resident community</li>
-<li>Provided excellent and efficient service; logged arrived mail and sent email reminders for pick-up, problem-solved with Harvard building maintenance staff around infrastructural and operational events for Adams House students</li>
+<li>Greeted dormitory residents and community with warmth and
+helpfulness as they entered the building and retrieved their mail;
+completed administrative tasks for dormitory building operations with
+efficiency and organization</li>
+<li>Maintained safe, secure entry procedures to ensure the safety of the
+dormitory building and resident community</li>
+<li>Provided excellent and efficient service; logged arrived mail and
+sent email reminders for pick-up, problem-solved with Harvard building
+maintenance staff around infrastructural and operational events for
+Adams House students</li>
 </ul></li>
-<li><p><strong>Harvard College Conservation Society |</strong> <strong><em>Project Leader</em></strong> <strong>|</strong> <em>Cambridge, Massachusetts.</em> <strong>|</strong> <em>2017-2018.</em></p>
+<li><p><strong>Harvard College Conservation Society |</strong>
+<strong><em>Project Leader</em></strong> <strong>|</strong>
+<em>Cambridge, Massachusetts.</em> <strong>|</strong>
+<em>2017-2018.</em></p>
 <ul>
-<li>Coordinated with conservation education team at the Kasiisi Project in Uganda to establish curriculum goals</li>
-<li>Managed undergraduate team in developing educational tools for the Kasiisi Project’s conservation education program; delegated core responsibilities; supported team members in understanding goals and vision of the project</li>
-<li>Implemented team-building activities to foster an inclusive, community space where team members could bring their whole selves while working on our project</li>
+<li>Coordinated with conservation education team at the Kasiisi Project
+in Uganda to establish curriculum goals</li>
+<li>Managed undergraduate team in developing educational tools for the
+Kasiisi Project’s conservation education program; delegated core
+responsibilities; supported team members in understanding goals and
+vision of the project</li>
+<li>Implemented team-building activities to foster an inclusive,
+community space where team members could bring their whole selves while
+working on our project</li>
 </ul></li>
-<li><p><strong>The Kasiisi Project |</strong> <strong><em>Beekeeping and Conservation Intern</em></strong> <strong>|</strong> <em>Fort Portal, Uganda.</em> <strong>|</strong> <em>Summer 2017.</em></p>
+<li><p><strong>The Kasiisi Project |</strong> <strong><em>Beekeeping and
+Conservation Intern</em></strong> <strong>|</strong> <em>Fort Portal,
+Uganda.</em> <strong>|</strong> <em>Summer 2017.</em></p>
 <ul>
-<li>Built close relationships with local farmers and beekeepers to develop apiary management best practices and systems which improved hive productivity (now harvesting and selling honey)</li>
-<li>Installed Broodminder hive monitoring devices and trained local beekeepers to do the same and collect data from the devices. Used in global honeybee citizen science and to understand the role of apiaries in conserving elephants</li>
-<li>Planned educational materials and activities and taught regional elementary school students about honeybees, their biology, beekeeping, and other environmental topics; collaborated with local educators to teach appropriate content</li>
+<li>Built close relationships with local farmers and beekeepers to
+develop apiary management best practices and systems which improved hive
+productivity (now harvesting and selling honey)</li>
+<li>Installed Broodminder hive monitoring devices and trained local
+beekeepers to do the same and collect data from the devices. Used in
+global honeybee citizen science and to understand the role of apiaries
+in conserving elephants</li>
+<li>Planned educational materials and activities and taught regional
+elementary school students about honeybees, their biology, beekeeping,
+and other environmental topics; collaborated with local educators to
+teach appropriate content</li>
 </ul></li>
-<li><p><strong>Harvard University Farrell Lab |</strong> <strong><em>Undergraduate Researcher</em></strong> <strong>|</strong> <em>Cambridge, Massachusetts.</em> <strong>|</strong> <em>2016-2018.</em></p>
+<li><p><strong>Harvard University Farrell Lab |</strong>
+<strong><em>Undergraduate Researcher</em></strong> <strong>|</strong>
+<em>Cambridge, Massachusetts.</em> <strong>|</strong>
+<em>2016-2018.</em></p>
 <ul>
-<li>Learned and independently executed various lab techniques in beetle and plant genomics (DNA amplification, PCR, sequencing), as well as the programs used to understand and analyze genomic data, such as R and Geneius</li>
-<li>Researched existing, relevant academic work within Aristolochia plant genomics and applied techniques to my own project using Aristolochia samples from Hispaniola</li>
-<li>Participated in lab discussions and presented in group meetings with graduate student researchers</li>
+<li>Learned and independently executed various lab techniques in beetle
+and plant genomics (DNA amplification, PCR, sequencing), as well as the
+programs used to understand and analyze genomic data, such as R and
+Geneius</li>
+<li>Researched existing, relevant academic work within Aristolochia
+plant genomics and applied techniques to my own project using
+Aristolochia samples from Hispaniola</li>
+<li>Participated in lab discussions and presented in group meetings with
+graduate student researchers</li>
 </ul></li>
-<li><p><strong>Harvard University Museum of Natural History |</strong> <strong><em>Undergraduate Research Assistant</em></strong> <strong>|</strong> <em>Cambridge, Massachusetts.</em> <strong>|</strong> <em>2015-2016.</em></p>
+<li><p><strong>Harvard University Museum of Natural History |</strong>
+<strong><em>Undergraduate Research Assistant</em></strong>
+<strong>|</strong> <em>Cambridge, Massachusetts.</em> <strong>|</strong>
+<em>2015-2016.</em></p>
 <ul>
-<li>Collaborated with museum team to develop vision for “What’s in a Name?” exhibit and online resources</li>
-<li>Independently researched biological and scientific information regarding binomial nomenclature and that of specific species; using this research, wrote science communication pieces and compiled relevant images for museum patrons</li>
+<li>Collaborated with museum team to develop vision for “What’s in a
+Name?” exhibit and online resources</li>
+<li>Independently researched biological and scientific information
+regarding binomial nomenclature and that of specific species; using this
+research, wrote science communication pieces and compiled relevant
+images for museum patrons</li>
 </ul></li>
-<li><p><strong>South Shore YMCA Camps Burgess and Hayward |</strong> <strong><em>Counselor in Training, Junior Counselor, and Counselor</em></strong> <strong>|</strong> <em>Sandwich, Massachusetts.</em> <strong>|</strong> <em>2013-2015.</em></p>
+<li><p><strong>South Shore YMCA Camps Burgess and Hayward |</strong>
+<strong><em>Counselor in Training, Junior Counselor, and
+Counselor</em></strong> <strong>|</strong> <em>Sandwich,
+Massachusetts.</em> <strong>|</strong> <em>2013-2015.</em></p>
 <ul>
-<li>Cultivated a space of inclusion, joy, and courage for girls ages 8-15 by emphasizing group norms and practices and celebrating uniqueness of individual campers, most of whom were away from home for the first time</li>
+<li>Cultivated a space of inclusion, joy, and courage for girls ages
+8-15 by emphasizing group norms and practices and celebrating uniqueness
+of individual campers, most of whom were away from home for the first
+time</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div></li>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div></li>
 </ul>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

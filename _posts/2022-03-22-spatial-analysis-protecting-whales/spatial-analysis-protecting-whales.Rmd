@@ -16,9 +16,13 @@ output:
 
 ### Intro
 
-This blog post is based on an assignment from my Master's of Environmental Data Science course EDS 223: Spatial Analysis for Environmental Data Science. 
+This blog post is based on an assignment from my Master's of Environmental Data Science course [EDS 223: Spatial Analysis for Environmental Data Science](https://jamesfrew.github.io/EDS_223_spatial_analysis/). 
+
+In the assignment, my classmates and I were asked to establish a vessel speed reduction zone around the Caribbean island country of Dominica for the protection of whales from shipping strikes. We were then tasked with assessing the predicted impacts on shipping from such a policy. This is based on a [MESM group project completed in 2020](https://bren.ucsb.edu/projects/whales-vessels-and-fish-economic-valuation-whale-watching-and-marine-spatial-planning). 
 
 ### Load Libraries
+
+First, I load the libraries to access all the tools necessary to complete this analysis. I completed this analysis by coding in Python using Jupyter Notebooks. The libraries utilized are shown in the code chunk below: 
 
 ```python
 #load libraries 
@@ -32,10 +36,12 @@ from shapely.geometry import Polygon
 
 ### Dominica Outline
 
-In the code chunk below, I define a file path for Dominica spatial data:
+In the code chunk below, I define a file path for Dominica spatial data so that I have the country's outline shape in order to understand whale and ship traffic around its perimeter:
 
 ```python
+#filepath to dominica data
 input_folder = r"data/dominica"
+#name of shapefile
 dominica_shapefile = "dma_admn_adm0_py_s1_dominode_v2.shp"
 
 dominica_fp = os.path.join(input_folder, dominica_shapefile)
@@ -53,7 +59,7 @@ Then I change the [CRS](https://datacarpentry.org/organization-geospatial/03-crs
 dominica_2002 = dominica_data.to_crs("EPSG:2002")
 ```
 
-Next, I plot the outline of Dominica to explore and check that the output is expected:
+After transforming the CRS, I plot the outline of Dominica to explore and check that the output is expected:
 
 ```python
 fig, ax = plt.subplots(figsize=(3, 3), dpi=200)
@@ -65,17 +71,18 @@ dominica_2002.plot(ax = ax, color = 'green')
 
 ### Whale Sighting Data
 
-Next, I define the file path for whale sighting spatial data:
+Next, I define the file path for whale sighting spatial data so that I can develop an idea of where whale traffic is before establishing the vessel speed reducation zone, which is intended to protect whales:
 
 ```python
+#filepath to whale data
 sightings_input_folder = r"data"
+#name of whale sightings data
 sightings_csv = "sightings2005_2018.csv"
 
 sightings_fp = os.path.join(sightings_input_folder, sightings_csv)
 ```
 
-Read file using `read_file()`:
-
+With that, I file using `read_file()`:
 
 ```python
 sightings_data = gpd.read_file(sightings_fp)
@@ -83,18 +90,15 @@ sightings_data = gpd.read_file(sightings_fp)
 
 Bootstrap the geometries:
 
-
 ```python
 sightings_points = gpd.points_from_xy(sightings_data['Long'], sightings_data['Lat'])
 ```
-
-Project the dataset into a Geo Data Frame with the appropriate CRS:
-
 
 ```python
 sightings_gdf_4326 = gpd.GeoDataFrame(sightings_data, geometry=sightings_points, crs = 'EPSG:4326')
 ```
 
+Project the dataset into a Geo Data Frame with the appropriate CRS:
 
 ```python
 sightings_gdf_2002 = sightings_gdf_4326.to_crs("EPSG:2002")
@@ -102,26 +106,24 @@ sightings_gdf_2002 = sightings_gdf_4326.to_crs("EPSG:2002")
 
 #### Create Grid
 
-Define the grid's boundaries:
+In these next steps, I create a grid so that the conservation zone can be established using grid cells with a higher concentration of whale sightings. 
 
+First, I define the grid's boundaries based on the bounds of the whale sightings data:
 
 ```python
 minx, miny, maxx, maxy = sightings_gdf_2002.total_bounds
 ```
 
-Define the grid's cell size, in meters:
-
+Then, I define the grid's cell size, in meters:
 
 ```python
 cell_size = 2000
 ```
 
-
 ```python
 xs = np.arange(minx, maxx, cell_size)
 ys = np.arange(miny, maxy, cell_size)
 ```
-
 
 ```python
 def make_cell(x, y, cell_size):
@@ -134,7 +136,6 @@ def make_cell(x, y, cell_size):
     cell = Polygon(ring)
     return cell
 ```
-
 
 ```python
 cells = []
