@@ -6,7 +6,15 @@ title: "About Scout"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Scout Leonard graduated from Harvard College in 2018 with her BA in Integrative Biology and minor in Energy and the Environment. During college, Scout led consulting projects for nonprofits such as the [Planetary Health Alliance](https://www.planetaryhealthalliance.org/planetary-health) as a project leader in the Harvard College Conservation Society. She also conducted research with [Professor Brian Farrell](https://farrell.oeb.harvard.edu) on island endemism and plant phylogenetics. 
+Scout Leonard is a recent graduate of the [<span style="color: #436857;">Masters of Environmental Data Science</span>](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) program at the Bren School at the University of California Santa Barbara. Currently, she is a fellow with the [<span style="color: #436857;">Stanford University Data Science for Social Good Program</span>](https://datascience.stanford.edu/programs/data-science-social-good-summer-program). Scout is passionate about [<span style="color: #436857;">data visualization</span>](https://github.com/scoutcleonard/tidytuesday) and open, reproducible data science. 
+
+<center>
+
+<img src="images/about/bren_grad.jpg" alt="Scout dressed in graduation regalia for graduating from her Master degree. Scout wears a black grad cap and a red Matrisse-esque print dress. She stands in front of a sand-colored stone wall that reads 'University of California Santa Barbara,' framed by blue skies and green grass." style="width:400px;"/>
+
+</center>
+
+Scout graduated from Harvard College in 2018 with her BA in Integrative Biology and minor in Energy and the Environment. During college, Scout led consulting projects for nonprofits such as the [Planetary Health Alliance](https://www.planetaryhealthalliance.org/planetary-health) as a project leader in the Harvard College Conservation Society. She also conducted research with [Professor Brian Farrell](https://farrell.oeb.harvard.edu) on island endemism and plant phylogenetics. 
 
 <center>
 
