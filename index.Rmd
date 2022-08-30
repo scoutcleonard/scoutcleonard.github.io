@@ -10,6 +10,8 @@ links:
     url: "mailto:scout@bren.ucsb.edu"
   - label: Ravelry
     url: "https://www.ravelry.com/people/scoutcleonard" 
+  - label: Twitter
+    url: "https://twitter.com/scoutcleonard"
 output:
   postcards::trestles
 site: distill::distill_website
