@@ -21,6 +21,21 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Hello blog visitors! 
+
+I love September (my birthday month! back to school time! the best of both summer and autumn! basically [the vibes of these few seconds of Tom Hanks](https://www.youtube.com/watch?v=vViMeAkOsv8)). I am, however, always sad to see summer go! I relish the extra daylight hours to fit in a morning run and the warm evening weather for backpacking and car camping. In honor of all the miles logged outside this summer, I'm practicing visualizing spatial data using my Strava activities ☺
+
+There are loads of people who have accomplished this already! Thanks to everyone doing the good work of blogging up their bikes and hikes. Conquering the Strava API was the most challenging bit, but I could not have done it without your sweet, sweet blog guides! I'll drop the blogs I was inspired by here: 
+
+- [Julian During's R Views blog post](https://rviews.rstudio.com/2021/11/22/strava-data/#fn1)
+- [Sam Csik's GitHub repository](https://github.com/samanthacsik/strava-hikes), which she shared during her [awesome R Ladies Twitter takeover](https://twitter.com/WeAreRLadies/status/1535391110884798465)!
+- [This blog post from Dan Cullen](https://www.dancullen.me/articles/creating-a-heatmap-in-r-with-google-polylines)
+- Another [blog post from Daniel Padfield](https://padpadpadpad.github.io/post/animate-your-strava-activities-using-rstrava-and-gganimate/)
+
+Let's make some maps!
+
+🚴🥾🏃
+
 # Load Libraries 
 
 ```{r load_libs}
