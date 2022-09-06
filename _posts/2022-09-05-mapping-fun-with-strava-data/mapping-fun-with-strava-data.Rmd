@@ -15,6 +15,7 @@ output:
     self_contained: false
     toc: true
     toc_float: false
+preview: bike_photo.jpg
 ---
 
 ```{r setup, include=FALSE}
