@@ -1,16 +1,16 @@
 ---
-title: "Scout Leonard"
+title: "Scout Leonard (she/her)"
 image: "headshot.png"
 links:
-  - label: LinkedIn
+  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
     url: "https://www.linkedin.com/in/scout-leonard-a72539131/"
-  - label: GitHub
+  - label: '<i class="fab fa-github"></i> GitHub'
     url: "https://github.com/scoutcleonard"
-  - label: Email
+  - label: '<i class="fa fa-envelope" aria-hidden="true"></i> Email'
     url: "mailto:scout@bren.ucsb.edu"
-  - label: Ravelry
+  - label: '<i class="fa fa-ravelry" aria-hidden="true"></i> Ravelry'
     url: "https://www.ravelry.com/people/scoutcleonard" 
-  - label: Twitter
+  - label: '<i class="fa fa-twitter"></i> Twitter'
     url: "https://twitter.com/scoutcleonard"
 output:
   postcards::trestles
