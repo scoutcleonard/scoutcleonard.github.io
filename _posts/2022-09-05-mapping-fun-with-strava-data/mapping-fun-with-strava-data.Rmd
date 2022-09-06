@@ -14,7 +14,7 @@ output:
   distill::distill_article:
     self_contained: false
     toc: true
-    toc_float: true
+    toc_float: false
 ---
 
 ```{r setup, include=FALSE}
@@ -24,6 +24,8 @@ knitr::opts_chunk$set(echo = TRUE)
 Hello blog visitors! 
 
 I love September (my birthday month! back to school time! the best of both summer and autumn! basically [the vibes of these few seconds of Tom Hanks](https://www.youtube.com/watch?v=vViMeAkOsv8)). I am, however, always sad to see summer go! I relish the extra daylight hours to fit in a morning run and the warm evening weather for backpacking and car camping. In honor of all the miles logged outside this summer, I'm practicing visualizing spatial data using my Strava activities ☺
+
+![Here's me bike-packing in Napa Valley!](bike_photo.jpg)
 
 There are loads of people who have accomplished this already! Thanks to everyone doing the good work of blogging up their bikes and hikes. Conquering the Strava API was the most challenging bit, but I could not have done it without your sweet, sweet blog guides! I'll drop the blogs I was inspired by here: 
 
@@ -127,11 +129,13 @@ activities <- activities %>%
 
 ## Bay Area Activities
 
+I decided to map my running, hiking, and biking activities in Northern California for this exercise. Most of the activities happen to be in the Bay Area, where I live, but some of my adventures in Napa, Marin, and Yosemite make it into the map with the bounding box I set. 
+
 ### Create a Blank Map
 
 With the Strava data good to go for mapping, a blank canvas is needed to visualize my activities. 
 
-The code chunk below creates a blank leaflet map with a legend on which I'll add my activities data. 
+The code chunk below creates a blank `leaflet` map with a legend on which I'll add my activities data. 
 
 ```{r}
 ## Create blank map bounded by given lon and lat
@@ -160,6 +164,8 @@ map
 Finally, I loop through each activity in my compiled dataset. The for loop plots each activity in a 1 of 3 colors depending on the activity type, using an `if else` statement series. 
 
 The for loop also adds a label to each ride. The label gives details about the trip, including the date of the activity, distance of the activity, duration of the activity, and elevation gain. 
+
+Also in the for loop is the `decode_pl()` function from the `googleway` package for transforming polyline encoding to latitude and longitude as a dataframe. **Polyline encoding** stores a series of coordinates in a single string. 
 
 ```{r}
 unique_activites <- unique(activities$upload_id)
