@@ -7,7 +7,17 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Mapping Fun With Strava Data</title>
+      <dc:creator>Scout Leonard</dc:creator>
+      <link>https://scoutcleonard.github.io/posts/2022-09-05-mapping-fun-with-strava-data</link>
+      <description>Biking and running and hiking, oh my!</description>
+      <category>spatial</category>
+      <category>fun</category>
+      <guid>https://scoutcleonard.github.io/posts/2022-09-05-mapping-fun-with-strava-data</guid>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Spatial Analysis: Protecting Whales</title>
       <dc:creator>Scout Leonard</dc:creator>

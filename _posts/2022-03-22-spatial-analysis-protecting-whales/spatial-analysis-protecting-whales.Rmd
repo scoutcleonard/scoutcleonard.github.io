@@ -2,6 +2,7 @@
 title: "Spatial Analysis: Protecting Whales"
 categories:
   - class projects
+  - spatial
 description: |
   Using Python, I generate a whale-protecting reduced speeding zone and calculate the impact on shipping for the coast of Dominica.
 author:

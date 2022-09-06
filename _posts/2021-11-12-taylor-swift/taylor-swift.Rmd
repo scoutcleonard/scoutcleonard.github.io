@@ -2,6 +2,7 @@
 title: "Taylor Tuesday!"
 categories:
   - tidy tuesday
+  - fun
 description: |
   This Tidy Tuesday is from 2 months ago, but Taylor is forever.
 author:

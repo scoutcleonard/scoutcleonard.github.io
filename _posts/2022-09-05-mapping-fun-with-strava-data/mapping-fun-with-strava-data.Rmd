@@ -1,0 +1,227 @@
+---
+title: "Mapping Fun With Strava Data"
+description: |
+  Biking and running and hiking, oh my!
+categories:
+  - spatial
+  - fun
+author:
+  - name: Scout Leonard
+    url:
+      https://scoutcleonard.github.io: {}
+date: 2022-09-05
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load Libraries 
+
+```{r load_libs}
+#install and load librarian package if needed 
+if (!require(librarian)) {
+  install.packages("librarian")
+  library(librarian)
+}
+
+# load packages
+shelf(tidyverse,
+      here,
+      rStrava,
+      yaml,
+      feather,
+      googleway,
+      leaflet,
+      htmlwidgets)
+```
+
+#  Access the Strava API
+
+I found [this blog from Tilde Ann Thurium](https://medium.com/@annthurium/getting-started-with-the-strava-api-a-tutorial-f3909496cd2d) helpful in figuring out how to get started with the Strava API.
+
+My credentials are stored outside of my repository, and therefore not on Git, so that they remain mine, but if you have questions about how I write or call them, contact me. I am happy to help! 
+
+```{r eval = FALSE}
+source("../../../credentials/strava_credentials.R")
+```
+
+# Load Activities
+
+I downloaded my activities data using the function `rStrava::get_activity_list()` which uses the token generated in the previous code chunk. 
+
+Then, I compiled my activities data into a tidy dataframe. The `rStrava::compile_activites()` function creates a dataframe in which each row is a single activity. 
+
+```{r eval = FALSE}
+#download activities
+my_data  <- get_activity_list(stoken)
+
+#compile activities
+act_data <- compile_activities(my_data) %>% 
+  write_csv(here("data/strava_data.csv"))
+
+#check it out!
+glimpse(act_data)
+```
+
+```{r include = FALSE}
+act_data <- read_csv(here("data/strava_data.csv"))
+```
+
+# Define Columns of Interest & Tidy
+
+There are 201 columns in my compiled dataframe, and since I don't pay for Strava, a lot of them are junk: full of NAs because free Strava doesn't collect my heartrate, for example. 
+
+I select only the columns I am interested in mapping and tidy my dataframe to have more readable units of time, more straightforward column names, and to get rid of activities that have only a little data (that one time I used Strava skiing in Tahoe is not that interesting!). 
+
+```{r}
+columns_of_interest <- c('distance',
+                         'elapsed_time',
+                         'elev_high',
+                         'elev_low',
+                         'moving_time',
+                         'start_date',
+                         'start_date_local',
+                         'type',
+                         'map.summary_polyline',
+                         'upload_id',
+                         'start_latlng1',
+                         'start_latlng2',
+                         'total_elevation_gain',
+                         'upload_id')
+
+activities <- select(act_data, match(columns_of_interest,
+                                     names(act_data)))
+
+activities <- activities %>% 
+  mutate(elapsed_time = round(elapsed_time / 60 /60, digits = 2),
+         moving_time = round(moving_time / 60 / 60, digits = 2),
+         date = gsub("T.*$", '', start_date) %>% 
+           as.POSIXct(., format = "%Y-%m-%d")) %>% 
+  rename(latitude = "start_latlng1",
+         longitude = "start_latlng2") %>% 
+  filter(type == c("Ride", "Run", "Hike"))
+```
+
+# Mapping
+
+## Bay Area Activities
+
+### Create a Blank Map
+
+With the Strava data good to go for mapping, a blank canvas is needed to visualize my activities. 
+
+The code chunk below creates a blank leaflet map with a legend on which I'll add my activities data. 
+
+```{r}
+## Create blank map bounded by given lon and lat
+lons.range <- c(-123, -121)
+lats.range <- c(37, 38.7)
+
+#create a blank map
+map <- leaflet(options = leafletOptions(zoomControl = FALSE)) %>%
+  addProviderTiles('CartoDB.Positron',
+                   options = providerTileOptions(noWrap = T,
+                                                 minZoom = 7,
+                                                 maxZoom = 15)) %>%
+  fitBounds(lng1 = min(lons.range),
+            lat1 = max(lats.range),
+            lng2 <- max(lons.range),
+            lat2 = min(lats.range)) %>% 
+  addLegend(colors = c("#262d42", "#f7c267", "#591c19"),
+            labels = c("Ride", "Run", "Hike"),
+            position = "bottomright")
+
+map 
+```
+
+### Add Activities
+
+Finally, I loop through each activity in my compiled dataset. The for loop plots each activity in a 1 of 3 colors depending on the activity type, using an `if else` statement series. 
+
+The for loop also adds a label to each ride. The label gives details about the trip, including the date of the activity, distance of the activity, duration of the activity, and elevation gain. 
+
+```{r}
+unique_activites <- unique(activities$upload_id)
+
+for (i in unique_activites){
+  
+  #get activity
+  activity <- filter(activities,
+                     upload_id == i)
+  
+  #decode polyline
+  coords <- decode_pl(activity$map.summary_polyline)
+  
+  #labs
+  labs <- paste0('<p>',
+                 '<b>',
+                 "Activity Date: ",
+                 '</b>',
+                 activity$date,
+                 '<p></p>',
+                 '<b>',
+                 "Distance (Miles): ",
+                 '</b>',
+                 activity$distance,
+                 '<p></p>',
+                 '<b>',
+                 "Time (Hours): ",
+                 '</b>',
+                 activity$elapsed_time,
+                 '<p></p>',
+                 '<b>',
+                 "Elevation Gain (Feet): ",
+                 '</b>',
+                 activity$total_elevation_gain,
+                 '<p>') %>% 
+    htmltools::HTML()
+  
+  #plot activity! 
+  map <- if (activity$type == "Ride") {
+    addPolylines(map,
+                 lng = coords$lon,
+                 lat = coords$lat,
+                 color = "#262d42",
+                 weight = 2,
+                 opacity = 1/2,
+                 label = labs,
+                 labelOptions = labelOptions(style = list("font-family" = "serif",
+                                                          "font-style" = "bold",
+                                                          "box-shadow" = "3px 3px rgba(0, 0, 0, 0.25)")))
+  } else if (activity$type == "Run") {
+    addPolylines(map,
+                 lng = coords$lon,
+                 lat = coords$lat,
+                 color = "#f7c267",
+                 weight = 2,
+                 opacity = 1/2,
+                 label = labs,
+                 labelOptions = labelOptions(style = list("font-family" = "serif",
+                                                          "font-style" = "bold",
+                                                          "box-shadow" = "3px 3px rgba(0, 0, 0, 0.25)")))
+  } else if (activity$type == "Hike") {
+    addPolylines(map,
+                 lng = coords$lon,
+                 lat = coords$lat,
+                 color = "#591c19",
+                 weight = 2,
+                 opacity = 1/2,
+                 label = labs,
+                 labelOptions = labelOptions(style = list("font-family" = "serif",
+                                                          "font-style" = "bold",
+                                                          "box-shadow" = "3px 3px rgba(0, 0, 0, 0.25)")))
+  }
+}
+
+map
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.
