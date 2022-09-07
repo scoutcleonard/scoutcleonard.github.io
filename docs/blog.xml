@@ -7,7 +7,19 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 05 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Wind Power Potential: Spatial Analysis Using Python and SQL</title>
+      <dc:creator>Scout Leonard</dc:creator>
+      <link>https://scoutcleonard.github.io/posts/2022-09-07-wind-power-potential-spatial-analysis-using-r-python-and-sql</link>
+      <description>Using SQL, I calculate the area of zones in which wind power is not permitted based on wind siting policy parameters. Using the remaining available area, I calculate the energy production potential for wind-siting zones in Iowa.</description>
+      <category>class projects</category>
+      <category>spatial</category>
+      <category>python</category>
+      <category>SQL</category>
+      <guid>https://scoutcleonard.github.io/posts/2022-09-07-wind-power-potential-spatial-analysis-using-r-python-and-sql</guid>
+      <pubDate>Wed, 07 Sep 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Mapping Fun With Strava Data</title>
       <dc:creator>Scout Leonard</dc:creator>
