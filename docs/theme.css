@@ -28,7 +28,7 @@ html {
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
   /*-- Specify custom fonts ~~~ must be imported above   --*/
   --heading-font:    Crimson Text;
-  --mono-font:       Crimson Text;
+  --mono-font:       monospace;
   --body-font:       Crimson Text;
   --navbar-font:     Crimson Text;  /* websites + blogs only */
 }
