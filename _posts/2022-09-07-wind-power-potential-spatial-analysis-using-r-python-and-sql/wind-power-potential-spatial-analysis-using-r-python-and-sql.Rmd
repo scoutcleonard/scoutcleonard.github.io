@@ -17,7 +17,7 @@ output:
     self_contained: false
 ---
 
-This analysis comes from an assignment I completed in my [Masters of Environmental Data Science](https://ucsb-meds.github.io) course, [EDS223 Spatial Analysis (ESM 267 Advanced GIS)](https://jamesfrew.github.io/EDS_223_spatial_analysis/). I completed it with my course partner and [MESM](https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management) counterpart, [Meghan Fletcher](https://github.com/megfletch).
+This analysis comes from an [assignment](https://jamesfrew.github.io/EDS_223_spatial_analysis/assignments/4/HW4.html) I completed in my [Masters of Environmental Data Science](https://ucsb-meds.github.io) course, [EDS223 Spatial Analysis (ESM 267 Advanced GIS)](https://jamesfrew.github.io/EDS_223_spatial_analysis/). I completed it with my course partner and [MESM](https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management) counterpart, [Meghan Fletcher](https://github.com/megfletch).
 
 # Table of Contents
 1. [Setup](#setup)
@@ -62,7 +62,7 @@ This analysis comes from an assignment I completed in my [Masters of Environment
 
 ## 1. Setup
 
-In this assignment, we will be taking spatial data from the state of Iowa and determining how much land could be utilized for wind turbine placement given specified siting constraints. From this analysis, we will then determine the overall amount of energy that could be produced under two different scenarios involving two different placement scenarios determined by distance from residential buldings (3H and 10 H, defined in the Parameters section). The setup for this assignment is broken down into five sections, linked in the table of contents above.  
+In this assignment, I take spatial data from the state of Iowa and determine how much land could be utilized for wind turbine placement given specified siting constraints. From this analysis, I then determine the overall amount of energy that could be produced under two different scenarios involving two different placement parameters determined by turbine distance from residential buildings (3H and 10 H, defined in the Parameters section). The setup for this assignment is broken down into five sections, linked in the table of contents above. 
 
 First, we need to read in the various libraries necessary for performing the spatial analysis required throughout the assignment:
 
@@ -70,6 +70,7 @@ First, we need to read in the various libraries necessary for performing the spa
 
 ### 1.a. Load Libraries
 
+Below are the packages used in the analysis: 
 
 ```python
 import sqlalchemy
@@ -84,7 +85,7 @@ import math
 
 ### 1.b. Connect to postGIS database:
 
-Next, we need to connect to the postGIS database in order to pull in data from the the _osmiowa_ dataset which we will be analyzing in order to produce our final results. 
+Next, I connect to the postGIS database in order to pull in data from the the _osmiowa_ dataset which I analyze in order to produce the final results. [Open Street Map](https://www.openstreetmap.org/#map=4/38.01/-95.84) is an open source global geographic database. 
 
 ```python
 pg_uri_template = 'postgresql+psycopg2://{user}:{pwd}@{host}/{db_name}'
@@ -96,7 +97,6 @@ db_uri = pg_uri_template.format(
     db_name = 'osmiowa'
 )
 ```
-
 
 ```python
 db = sqlalchemy.create_engine(db_uri)
