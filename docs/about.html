@@ -785,6 +785,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1857,15 +1858,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -2436,56 +2443,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
 <div class="d-article">
-<p>Scout Leonard is a recent graduate of the <a
-href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science"><span
-style="color: #436857;">Masters of Environmental Data Science</span></a>
-program at the Bren School at the University of California Santa
-Barbara. Currently, she is a fellow with the <a
-href="https://datascience.stanford.edu/programs/data-science-social-good-summer-program"><span
-style="color: #436857;">Stanford University Data Science for Social Good
-Program</span></a>. Scout is passionate about <a
-href="https://github.com/scoutcleonard/tidytuesday"><span
-style="color: #436857;">data visualization</span></a> and open,
-reproducible data science.</p>
+<p>Scout Leonard is a recent graduate of the <a href="https://bren.ucsb.edu/masters-programs/master-environmental-data-science"><span style="color: #436857;">Masters of Environmental Data Science</span></a> program at the Bren School at the University of California Santa Barbara. Currently, she is a fellow with the <a href="https://datascience.stanford.edu/programs/data-science-social-good-summer-program"><span style="color: #436857;">Stanford University Data Science for Social Good Program</span></a>. Scout is passionate about <a href="https://github.com/scoutcleonard/tidytuesday"><span style="color: #436857;">data visualization</span></a> and open, reproducible data science.</p>
 <center>
 <p><img src="images/about/bren_grad.jpg" alt="Scout dressed in graduation regalia for graduating from her Master degree. Scout wears a black grad cap and a red Matrisse-esque print dress. She stands in front of a sand-colored stone wall that reads 'University of California Santa Barbara,' framed by blue skies and green grass." style="width:400px;"/></p>
 </center>
-<p>Scout graduated from Harvard College in 2018 with her BA in
-Integrative Biology and minor in Energy and the Environment. During
-college, Scout led consulting projects for nonprofits such as the <a
-href="https://www.planetaryhealthalliance.org/planetary-health">Planetary
-Health Alliance</a> as a project leader in the Harvard College
-Conservation Society. She also conducted research with <a
-href="https://farrell.oeb.harvard.edu">Professor Brian Farrell</a> on
-island endemism and plant phylogenetics.</p>
+<p>Scout graduated from Harvard College in 2018 with her BA in Integrative Biology and minor in Energy and the Environment. During college, Scout led consulting projects for nonprofits such as the <a href="https://www.planetaryhealthalliance.org/planetary-health">Planetary Health Alliance</a> as a project leader in the Harvard College Conservation Society. She also conducted research with <a href="https://farrell.oeb.harvard.edu">Professor Brian Farrell</a> on island endemism and plant phylogenetics.</p>
 <center>
 <p><img src="images/about/graduation.jpg" alt="Scout at the Adams House-hosted graduation for Harvard College 2018 rgaduates of Adams House. Scout is pictured in center with the Adams House Faculty Deans, Drs. Sean (left) and Judy (right) Palfrey." style="width:400px;"/></p>
 </center>
-<p>Supported by the Weissman Fellowship, Scout created apiary management
-systems for forest-edge hives in Kibale National Forest, Uganda, with
-the <a href="https://www.kasiisiproject.org">Kasiisi Project</a>. These
-“beehive-fences” have conservation, economic, and social benefits, even
-to this day; they reduce human-elephant conflict and provide income to
-farmers. This project inspired Scout’s interest in multidisciplinary
-sustainability projects, particularly those that emphasize environmental
-justice.</p>
+<p>Supported by the Weissman Fellowship, Scout created apiary management systems for forest-edge hives in Kibale National Forest, Uganda, with the <a href="https://www.kasiisiproject.org">Kasiisi Project</a>. These “beehive-fences” have conservation, economic, and social benefits, even to this day; they reduce human-elephant conflict and provide income to farmers. This project inspired Scout’s interest in multidisciplinary sustainability projects, particularly those that emphasize environmental justice.</p>
 <center>
 <p><img src="images/about/broodminder.jpg" alt="Pictured is Scout weilding a 'Broodminder' device, which she helped beekeepers to install to enhance apiary management during her internship with the Kasiisi Project. These devices automatically collect temperature and humidity data from beehives at regular time intervals, and this data can be retrieved simply via Bluetooth-enabled cellular decives" style="width:400px;"/></p>
 </center>
-<p>As such, Scout has spent the last 3 years working on urban food
-systems in Oakland, California with <a
-href="https://www.nokidhungry.org">No Kid Hungry</a> and <a
-href="https://foodcorps.org">FoodCorps</a>. She oversaw food system
-programs by managing procurement, participation, and waste data across
-the city; Scout believes that every person has the right to nutritious
-food, and her work expanded access to healthy school meals for Oakland.
-Using data science, Scout hopes to transform human-environmental systems
-to be more sustainable and equitable.</p>
+<p>As such, Scout has spent the last 3 years working on urban food systems in Oakland, California with <a href="https://www.nokidhungry.org">No Kid Hungry</a> and <a href="https://foodcorps.org">FoodCorps</a>. She oversaw food system programs by managing procurement, participation, and waste data across the city; Scout believes that every person has the right to nutritious food, and her work expanded access to healthy school meals for Oakland. Using data science, Scout hopes to transform human-environmental systems to be more sustainable and equitable.</p>
 <center>
 <p><img src="images/about/ousd.jpeg" alt="Prior to managing and implementing district-wide school meal programs in Oakland, Scout worked closely with students in school gardens and cafeterias! In this photo she stands in front of a class of 5-6 year-olds who are in a school garden of an Oakland neighborhood." style="width:400px;"/></p>
 </center>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
