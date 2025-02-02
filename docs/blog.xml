@@ -7,7 +7,20 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 07 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Leveraging the R Packages `googlesheets4` and `ggplot2` for Fabric Shopping</title>
+      <dc:creator>Scout Leonard</dc:creator>
+      <link>https://scoutcleonard.github.io/posts/2025-02-02-leveraging-the-r-packages-googlesheets4-and-ggplot2-for-fabric-shopping</link>
+      <description>I've become quite comfortable with Google API packages in my current workplace, where I collaborate with enthusiastic and creative Google Suite users to integrate their data and projects with SIS data to create data tools and dashboards. This has inspired me to use `googlesheets4` in a recent personal project, shopping for quilting fabrics.</description>
+      <category>Google Suite</category>
+      <category>R</category>
+      <category>art</category>
+      <category>crafts</category>
+      <guid>https://scoutcleonard.github.io/posts/2025-02-02-leveraging-the-r-packages-googlesheets4-and-ggplot2-for-fabric-shopping</guid>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
+      <media:content url="https://scoutcleonard.github.io/posts/2025-02-02-leveraging-the-r-packages-googlesheets4-and-ggplot2-for-fabric-shopping/leveraging-the-r-packages-googlesheets4-and-ggplot2-for-fabric-shopping_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Wind Power Potential: Spatial Analysis Using Python and SQL</title>
       <dc:creator>Scout Leonard</dc:creator>
