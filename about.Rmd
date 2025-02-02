@@ -26,7 +26,7 @@ Supported by the Weissman Fellowship, Scout created apiary management systems fo
 
 <center>
 
-<img src="images/about/broodminder.jpg" alt="Pictured is Scout weilding a 'Broodminder' device, which she helped beekeepers to install to enhance apiary management during her internship with the Kasiisi Project. These devices automatically collect temperature and humidity data from beehives at regular time intervals, and this data can be retrieved simply via Bluetooth-enabled cellular decives" style="width:400px;"/>
+<img src="images/about/broodminder.jpg" alt="Pictured is Scout weilding a 'Broodminder' device, which she helped beekeepers to install to enhance apiary management during her internship with the Kasiisi Project. These devices automatically collect temperature and humidity data from beehives at regular time intervals, and this data can be retrieved simply via Bluetooth-enabled cellular devices" style="width:400px;"/>
 
 </center>
 
