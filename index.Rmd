@@ -1,5 +1,5 @@
 ---
-title: "Scout Leonard (she/her)"
+title: "Scout Leonard"
 image: "headshot.png"
 links:
   - label: '<i class="fab fa-linkedin"></i> LinkedIn'
